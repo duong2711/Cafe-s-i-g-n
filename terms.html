@@ -5,24 +5,370 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Điều Khoản Dịch Vụ - Cà Phê Sài Gòn</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+    
+    .terms-item {
+      transition: all 0.3s ease;
+    }
+    
+    .terms-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+    
+    .section-item {
+      transition: all 0.3s ease;
+    }
+    
+    .section-item:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+  </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
-  <header class="bg-amber-800 text-white py-4 shadow-md">
+  <header class="bg-gradient-to-r from-amber-800 to-amber-900 text-white py-6 shadow-lg sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold"><i class="fas fa-file-contract mr-2"></i>Cà Phê Sài Gòn</h1>
-      <a href="index.html" class="text-sm hover:underline">← Quay lại Trang Chủ</a>
+      <h1 class="text-3xl font-bold flex items-center">
+        <svg class="mr-3 w-8 h-8 fill-current" viewBox="0 0 24 24">
+          <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+        </svg>
+        Cà Phê Sài Gòn
+      </h1>
+      <a href="index.html" class="bg-white/20 hover:bg-white/30 px-6 py-3 rounded-lg transition-colors duration-200 text-lg font-medium flex items-center">
+        <svg class="mr-2 w-6 h-6 fill-current" viewBox="0 0 24 24">
+          <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
+        </svg>
+        Về Trang Chủ
+      </a>
     </div>
   </header>
-  <main class="max-w-4xl mx-auto px-4 py-12">
-    <h2 class="text-3xl font-bold text-amber-800 mb-6">Điều Khoản Dịch Vụ</h2>
-    <ul class="list-disc pl-6 space-y-2">
-      <li>Khách hàng cần cung cấp thông tin chính xác khi đặt hàng.</li>
-      <li>Chúng tôi có quyền hủy đơn nếu phát hiện gian lận.</li>
-      <li>Giá sản phẩm có thể thay đổi mà không cần báo trước.</li>
-    </ul>
+
+  <main class="max-w-5xl mx-auto px-4 py-12">
+    <h2 class="text-4xl font-bold text-amber-800 mb-8 text-center">Điều Khoản Dịch Vụ</h2>
+    
+    <div class="bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl p-8 mb-8">
+      <p class="text-2xl text-gray-700 text-center leading-relaxed">
+        Chào mừng bạn đến với Cà Phê Sài Gòn. Bằng việc sử dụng dịch vụ của chúng tôi, 
+        bạn đồng ý tuân thủ các điều khoản và điều kiện được quy định dưới đây.
+      </p>
+      <p class="text-xl text-gray-600 text-center mt-4">
+        <strong>Ngày có hiệu lực:</strong> 01/01/2024 | <strong>Cập nhật lần cuối:</strong> 15/12/2024
+      </p>
+    </div>
+
+    <!-- Quick Overview -->
+    <div class="grid md:grid-cols-3 gap-6 mb-12">
+      <div class="terms-item bg-white rounded-xl p-6 shadow-sm border border-gray-200 text-center">
+        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-blue-600" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M11,16.5L18,9.5L16.59,8.09L11,13.67L7.91,10.59L6.5,12L11,16.5Z"/>
+          </svg>
+        </div>
+        <h3 class="text-3xl font-bold text-amber-800 mb-3">Chấp Nhận</h3>
+        <p class="text-xl text-gray-700">Sử dụng dịch vụ = Đồng ý điều khoản</p>
+      </div>
+
+      <div class="terms-item bg-white rounded-xl p-6 shadow-sm border border-gray-200 text-center">
+        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-green-600" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M9,12L11,14L15,10L13.59,8.59L11,11.17L10.41,10.59L9,12M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z"/>
+          </svg>
+        </div>
+        <h3 class="text-3xl font-bold text-amber-800 mb-3">Bảo Vệ</h3>
+        <p class="text-xl text-gray-700">Quyền lợi khách hàng được đảm bảo</p>
+      </div>
+
+      <div class="terms-item bg-white rounded-xl p-6 shadow-sm border border-gray-200 text-center">
+        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-purple-600" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11.5C15.4,11.5 16,12.4 16,13V16C16,16.6 15.6,17 15,17H9C8.4,17 8,16.6 8,16V13C8,12.4 8.4,11.5 9,11.5V10C9,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.2,8.7 10.2,10V11.5H13.8V10C13.8,8.7 12.8,8.2 12,8.2Z"/>
+          </svg>
+        </div>
+        <h3 class="text-3xl font-bold text-amber-800 mb-3">An Toàn</h3>
+        <p class="text-xl text-gray-700">Thông tin cá nhân được bảo mật</p>
+      </div>
+    </div>
+
+    <!-- Detailed Terms -->
+    <div class="space-y-8">
+      <!-- User Obligations -->
+      <div class="terms-item bg-white rounded-xl p-8 shadow-sm border border-gray-200">
+        <div class="flex items-start">
+          <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-6 flex-shrink-0">
+            <svg class="w-6 h-6 text-blue-600" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-3xl font-bold text-amber-800 mb-6">Nghĩa Vụ Của Khách Hàng</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="bg-blue-50 rounded-lg p-6">
+                <h4 class="font-bold text-xl text-blue-800 mb-3">📝 Thông Tin Chính Xác</h4>
+                <ul class="text-xl text-gray-700 space-y-2">
+                  <li>• Cung cấp thông tin đầy đủ, chính xác</li>
+                  <li>• Cập nhật thông tin khi có thay đổi</li>
+                  <li>• Chịu tr책nhiệm về tính xác thực</li>
+                  <li>• Không sử dụng thông tin giả mạo</li>
+                </ul>
+              </div>
+              
+              <div class="bg-green-50 rounded-lg p-6">
+                <h4 class="font-bold text-xl text-green-800 mb-3">💳 Thanh Toán Đúng Hạn</h4>
+                <ul class="text-xl text-gray-700 space-y-2">
+                  <li>• Thanh toán đầy đủ theo đơn hàng</li>
+                  <li>• Tuân thủ thời hạn thanh toán</li>
+                  <li>• Sử dụng phương thức hợp lệ</li>
+                  <li>• Thông báo khi có vấn đề</li>
+                </ul>
+              </div>
+              
+              <div class="bg-yellow-50 rounded-lg p-6">
+                <h4 class="font-bold text-xl text-yellow-800 mb-3">🚫 Hành Vi Cấm</h4>
+                <ul class="text-xl text-gray-700 space-y-2">
+                  <li>• Không gian lận, lừa đảo</li>
+                  <li>• Không sử dụng sai mục đích</li>
+                  <li>• Không vi phạm pháp luật</li>
+                  <li>• Không làm tổn hại hệ thống</li>
+                </ul>
+              </div>
+              
+              <div class="bg-purple-50 rounded-lg p-6">
+                <h4 class="font-bold text-xl text-purple-800 mb-3">🤝 Hợp Tác Tích Cực</h4>
+                <ul class="text-xl text-gray-700 space-y-2">
+                  <li>• Phối hợp trong quá trình giao hàng</li>
+                  <li>• Phản hồi kịp thời khi cần</li>
+                  <li>• Tuân thủ quy định của công ty</li>
+                  <li>• Tôn trọng nhân viên dịch vụ</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service Terms -->
+      <div class="terms-item bg-white rounded-xl p-8 shadow-sm border border-gray-200">
+        <div class="flex items-start">
+          <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-6 flex-shrink-0">
+            <svg class="w-6 h-6 text-green-600" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19Z"/>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-3xl font-bold text-amber-800 mb-6">Điều Khoản Dịch Vụ</h3>
+            <div class="space-y-6">
+              <div class="bg-green-50 rounded-lg p-6">
+                <h4 class="font-bold text-xl text-green-800 mb-3">🛍️ Đặt Hàng & Xác Nhận</h4>
+                <p class="text-xl text-gray-700 mb-3">Quy trình đặt hàng và xác nhận đơn hàng:</p>
+                <ul class="text-lg text-gray-600 space-y-1">
+                  <li>• Đơn hàng được xác nhận qua email/SMS trong vòng 30 phút</li>
+                  <li>• Chúng tôi có quyền từ chối đơn hàng không hợp lệ</li>
+                  <li>• Khách hàng có thể hủy đơn trước khi xác nhận</li>
+                  <li>• Thông tin đơn hàng phải chính xác và đầy đủ</li>
+                </ul>
+              </div>
+              
+              <div class="bg-blue-50 rounded-lg p-6">
+                <h4 class="font-bold text-xl text-blue-800 mb-3">💰 Giá Cả & Khuyến Mãi</h4>
+                <p class="text-xl text-gray-700 mb-3">Chính sách về giá và chương trình khuyến mãi:</p>
+                <ul class="text-lg text-gray-600 space-y-1">
+                  <li>• Giá sản phẩm có thể thay đổi mà không cần báo trước</li>
+                  <li>• Giá áp dụng tại thời điểm xác nhận đơn hàng</li>
+                  <li>• Khuyến mãi có thời hạn và điều kiện cụ thể</li>
+                  <li>• Không áp dụng nhiều chương trình cùng lúc</li>
+                </ul>
+              </div>
+              
+              <div class="bg-yellow-50 rounded-lg p-6">
+                <h4 class="font-bold text-xl text-yellow-800 mb-3">📦 Giao Hàng & Nhận Hàng</h4>
+                <p class="text-xl text-gray-700 mb-3">Quy định về giao nhận hàng hóa:</p>
+                <ul class="text-lg text-gray-600 space-y-1">
+                  <li>• Thời gian giao hàng là ước tính, có thể thay đổi</li>
+                  <li>• Khách hàng cần có mặt tại địa chỉ giao hàng</li>
+                  <li>• Kiểm tra hàng hóa ngay khi nhận</li>
+                  <li>• Báo ngay nếu có vấn đề về sản phẩm</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Payment Terms -->
+      <div class="terms-item bg-white rounded-xl p-8 shadow-sm border border-gray-200">
+        <div class="flex items-start">
+          <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mr-6 flex-shrink-0">
+            <svg class="w-6 h-6 text-yellow-600" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M7,15H9C9,16.08 10.37,17 12,17C13.63,17 15,16.08 15,15C15,13.9 13.96,13.5 11.76,12.97C9.64,12.44 7,11.78 7,9C7,7.21 8.47,5.69 10.5,5.18V3H13.5V5.18C15.53,5.69 17,7.21 17,9H15C15,7.92 13.63,7 12,7C10.37,7 9,7.92 9,9C9,10.1 10.04,10.5 12.24,11.03C14.36,11.56 17,12.22 17,15C17,16.79 15.53,18.31 13.5,18.82V21H10.5V18.82C8.47,18.31 7,16.79 7,15Z"/>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-3xl font-bold text-amber-800 mb-6">Điều Khoản Thanh Toán</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="bg-yellow-50 rounded-lg p-6">
+                <h4 class="font-bold text-xl text-yellow-800 mb-3">💳 Phương Thức Thanh Toán</h4>
+                <ul class="text-xl text-gray-700 space-y-2">
+                  <li>• Thanh toán khi nhận hàng (COD)</li>
+                  <li>• Chuyển khoản ngân hàng</li>
+                  <li>• Ví điện tử (MoMo, ZaloPay)</li>
+                  <li>• Thẻ tín dụng/ghi nợ</li>
+                </ul>
+              </div>
+              
+              <div class="bg-red-50 rounded-lg p-6">
+                <h4 class="font-bold text-xl text-red-800 mb-3">⚠️ Lưu Ý Quan Trọng</h4>
+                <ul class="text-xl text-gray-700 space-y-2">
+                  <li>• Thanh toán đầy đủ trước khi giao hàng</li>
+                  <li>• Không hoàn tiền với COD đã thanh toán</li>
+                  <li>• Phí giao dịch do khách hàng chịu</li>
+                  <li>• Hóa đơn được xuất theo yêu cầu</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Intellectual Property -->
+      <div class="terms-item bg-white rounded-xl p-8 shadow-sm border border-gray-200">
+        <div class="flex items-start">
+          <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-6 flex-shrink-0">
+            <svg class="w-6 h-6 text-purple-600" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11.5C15.4,11.5 16,12.4 16,13V16C16,16.6 15.6,17 15,17H9C8.4,17 8,16.6 8,16V13C8,12.4 8.4,11.5 9,11.5V10C9,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.2,8.7 10.2,10V11.5H13.8V10C13.8,8.7 12.8,8.2 12,8.2Z"/>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-3xl font-bold text-amber-800 mb-6">Quyền Sở Hữu Trí Tuệ</h3>
+            <div class="space-y-4">
+              <div class="bg-purple-50 rounded-lg p-6">
+                <h4 class="font-bold text-xl text-purple-800 mb-3">© Bản Quyền Nội Dung</h4>
+                <p class="text-xl text-gray-700">Tất cả nội dung trên website bao gồm văn bản, hình ảnh, logo, thiết kế đều thuộc quyền sở hữu của Cà Phê Sài Gòn. Việc sao chép, sử dụng mà không có sự đồng ý bằng văn bản là vi phạm pháp luật.</p>
+              </div>
+              
+              <div class="bg-blue-50 rounded-lg p-6">
+                <h4 class="font-bold text-xl text-blue-800 mb-3">🏷️ Thương Hiệu & Logo</h4>
+                <p class="text-xl text-gray-700">Tên thương hiệu "Cà Phê Sài Gòn", logo và các ký hiệu nhận diện thương hiệu được bảo vệ bởi luật sở hữu trí tuệ. Khách hàng không được sử dụng cho mục đích thương mại.</p>
+              </div>
+              
+              <div class="bg-green-50 rounded-lg p-6">
+                <h4 class="font-bold text-xl text-green-800 mb-3">📸 Quyền Sử Dụng Hình Ảnh</h4>
+                <p class="text-xl text-gray-700">Khách hàng đồng ý cho phép chúng tôi sử dụng hình ảnh, đánh giá của khách hàng cho mục đích marketing và quảng bá sản phẩm mà không cần thông báo trước.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Limitation of Liability -->
+      <div class="terms-item bg-white rounded-xl p-8 shadow-sm border border-gray-200">
+        <div class="flex items-start">
+          <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-6 flex-shrink-0">
+            <svg class="w-6 h-6 text-red-600" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"/>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-3xl font-bold text-amber-800 mb-6">Giới Hạn Trách Nhiệm</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="font-bold text-xl text-gray-800 mb-3">⚖️ Trách Nhiệm Của Chúng Tôi</h4>
+                <ul class="text-xl text-gray-700 space-y-2">
+                  <li>• Cung cấp sản phẩm chất lượng</li>
+                  <li>• Giao hàng đúng thời gian cam kết</li>
+                  <li>• Hỗ trợ khách hàng tận tình</li>
+                  <li>• Bảo mật thông tin cá nhân</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-bold text-xl text-gray-800 mb-3">🚫 Không Chịu Trách Nhiệm</h4>
+                <ul class="text-xl text-gray-700 space-y-2">
+                  <li>• Thiệt hại do sử dụng sai cách</li>
+                  <li>• Sự cố ngoài tầm kiểm soát</li>
+                  <li>• Thông tin sai do khách cung cấp</li>
+                  <li>• Thiệt hại gián tiếp, ngẫu nhiên</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dispute Resolution -->
+      <div class="terms-item bg-white rounded-xl p-8 shadow-sm border border-gray-200">
+        <div class="flex items-start">
+          <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mr-6 flex-shrink-0">
+            <svg class="w-6 h-6 text-orange-600" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12,3C7.58,3 4,4.79 4,7C4,9.21 7.58,11 12,11C16.42,11 20,9.21 20,7C20,4.79 16.42,3 12,3M4,9V12C4,14.21 7.58,16 12,16C16.42,16 20,14.21 20,12V9C20,11.21 16.42,13 12,13C7.58,13 4,11.21 4,9M4,14V17C4,19.21 7.58,21 12,21C16.42,21 20,19.21 20,17V14C20,16.21 16.42,18 12,18C7.58,18 4,16.21 4,14Z"/>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-3xl font-bold text-amber-800 mb-6">Giải Quyết Tranh Chấp</h3>
+            <div class="space-y-4">
+              <div class="bg-orange-50 rounded-lg p-6">
+                <h4 class="font-bold text-xl text-orange-800 mb-3">🤝 Thương Lượng Trực Tiếp</h4>
+                <p class="text-xl text-gray-700">Mọi tranh chấp sẽ được giải quyết thông qua thương lượng trực tiếp giữa hai bên. Chúng tôi cam kết lắng nghe và tìm ra giải pháp tốt nhất cho khách hàng trong vòng 7 ngày làm việc.</p>
+              </div>
+              
+              <div class="bg-blue-50 rounded-lg p-6">
+                <h4 class="font-bold text-xl text-blue-800 mb-3">⚖️ Pháp Luật Áp Dụng</h4>
+                <p class="text-xl text-gray-700">Các điều khoản này được điều chỉnh bởi pháp luật Việt Nam. Mọi tranh chấp không thể giải quyết bằng thương lượng sẽ được đưa ra Tòa án có thẩm quyền tại TP.HCM.</p>
+              </div>
+              
+              <div class="bg-green-50 rounded-lg p-6">
+                <h4 class="font-bold text-xl text-green-800 mb-3">📞 Liên Hệ Hỗ Trợ</h4>
+                <p class="text-xl text-gray-700">Khi có tranh chấp, vui lòng liên hệ hotline 0988 007 527 hoặc email BABAIU23341@student.hcmiu.edu.vn để được hỗ trợ nhanh chóng và hiệu quả nhất.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Updates & Changes -->
+      <div class="bg-gradient-to-r from-amber-100 to-orange-100 rounded-2xl p-8">
+        <h3 class="text-3xl font-bold text-amber-800 mb-6 text-center">Cập Nhật Điều Khoản</h3>
+        <div class="text-center">
+          <p class="text-2xl text-gray-700 mb-4">
+            Chúng tôi có quyền cập nhật, sửa đổi các điều khoản này bất cứ lúc nào để phù hợp với pháp luật và nhu cầu kinh doanh.
+          </p>
+          <p class="text-xl text-gray-600">
+            Mọi thay đổi sẽ được thông báo trước 15 ngày qua email và website chính thức. 
+            Việc tiếp tục sử dụng dịch vụ sau khi có thay đổi đồng nghĩa với việc chấp nhận điều khoản mới.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Home Button Section -->
+    <div class="flex justify-center items-center gap-6 mt-12 mb-8">
+      <a href="index.html" class="bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white px-8 py-4 rounded-xl font-semibold text-xl transition-all duration-200 transform hover:scale-105 shadow-lg flex items-center">
+        <svg class="mr-3 w-8 h-8 fill-current" viewBox="0 0 24 24">
+          <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
+        </svg>
+        Về Trang Chủ
+      </a>
+      <button onclick="scrollToTop()" class="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white w-14 h-14 rounded-full shadow-lg transition-all duration-200 transform hover:scale-110 flex items-center justify-center">
+        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+          <path d="M12 4l-8 8h6v8h4v-8h6l-8-8z"/>
+        </svg>
+      </button>
+    </div>
   </main>
+
   <footer class="bg-gray-900 text-white py-6 text-center text-gray-400 text-sm">
     © 2024 Cà Phê Sài Gòn. Tất cả quyền được bảo lưu.
   </footer>
-</body>
+
+  <script>
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+  </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'988f770074ac25e5',t:'MTc1OTUyNjIzMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
