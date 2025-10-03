@@ -1,0 +1,1743 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cà Phê Sài Gòn - Cà Phê Việt Nam Cao Cấp</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+        }
+        
+        .coffee-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+        
+        .review-card {
+            background: linear-gradient(145deg, #ffffff, #f8f9fa);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="smooth-scroll">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-amber-800">
+                        <i class="fas fa-coffee mr-2"></i>Cà Phê Sài Gòn
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#home" class="text-gray-700 hover:text-amber-800 px-3 py-2 rounded-md text-sm font-medium transition-colors">Trang Chủ</a>
+                        <a href="#about" class="text-gray-700 hover:text-amber-800 px-3 py-2 rounded-md text-sm font-medium transition-colors">Về Chúng Tôi</a>
+                        <a href="#products" class="text-gray-700 hover:text-amber-800 px-3 py-2 rounded-md text-sm font-medium transition-colors">Sản Phẩm</a>
+                        <a href="#reviews" class="text-gray-700 hover:text-amber-800 px-3 py-2 rounded-md text-sm font-medium transition-colors">Đánh Giá</a>
+                        <a href="#contact" class="text-gray-700 hover:text-amber-800 px-3 py-2 rounded-md text-sm font-medium transition-colors">Liên Hệ</a>
+                        <button onclick="showCart()" class="bg-amber-800 text-white px-4 py-2 rounded-lg hover:bg-amber-900 transition-colors" id="cart-button">
+                            <i class="fas fa-shopping-cart mr-2"></i>Giỏ Hàng (0)
+                        </button>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-amber-800">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block text-gray-700 hover:text-amber-800 px-3 py-2 rounded-md text-base font-medium">Trang Chủ</a>
+                <a href="#about" class="block text-gray-700 hover:text-amber-800 px-3 py-2 rounded-md text-base font-medium">Về Chúng Tôi</a>
+                <a href="#products" class="block text-gray-700 hover:text-amber-800 px-3 py-2 rounded-md text-base font-medium">Sản Phẩm</a>
+                <a href="#reviews" class="block text-gray-700 hover:text-amber-800 px-3 py-2 rounded-md text-base font-medium">Đánh Giá</a>
+                <a href="#contact" class="block text-gray-700 hover:text-amber-800 px-3 py-2 rounded-md text-base font-medium">Liên Hệ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page 1: Homepage -->
+    <section id="home" class="relative min-h-screen flex items-center pt-16 overflow-hidden">
+        <!-- Background with better contrast -->
+        <div class="absolute inset-0 bg-gradient-to-br from-amber-900 via-amber-800 to-orange-900"></div>
+        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+        
+        <!-- Coffee beans pattern overlay -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="coffee-pattern h-full w-full"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Content - Enhanced with better contrast -->
+                <div class="text-white fade-in">
+                    <!-- Logo and Brand -->
+                    <div class="mb-8 bg-black bg-opacity-20 rounded-2xl p-6 backdrop-blur-sm">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-yellow-400 rounded-full p-4 mr-4">
+                                <i class="fas fa-coffee text-4xl text-amber-900"></i>
+                            </div>
+                            <div>
+                                <h1 class="text-5xl font-bold text-white drop-shadow-lg">Cà Phê Sài Gòn</h1>
+                                <p class="text-yellow-300 text-lg font-medium">Hương Vị Truyền Thống</p>
+                            </div>
+                        </div>
+                        <p class="text-2xl text-yellow-200 italic font-light border-l-4 border-yellow-400 pl-4">
+                            "Đánh Thức Di Sản Cà Phê Việt Nam, Từng Tách Một"
+                        </p>
+                    </div>
+                    
+                    <!-- Main Content -->
+                    <div class="bg-white bg-opacity-10 rounded-2xl p-8 backdrop-blur-sm mb-8">
+                        <h2 class="text-4xl font-bold mb-6 text-white drop-shadow-lg">Cà Phê Việt Nam Cao Cấp</h2>
+                        <p class="text-xl mb-6 leading-relaxed text-gray-100">
+                            Trải nghiệm hương vị đậm đà, chính hiệu từ những hạt cà phê tuyển chọn của Việt Nam. 
+                            Từ cao nguyên sương mù Đà Lạt đến tách cà phê buổi sáng của bạn, chúng tôi mang đến hàng thế kỷ truyền thống trong từng ngụm cà phê rang hoàn hảo.
+                        </p>
+                        
+                        <!-- Key Features -->
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+                            <div class="text-center bg-white bg-opacity-20 rounded-lg p-4">
+                                <i class="fas fa-mountain text-3xl text-yellow-300 mb-2"></i>
+                                <p class="text-sm font-semibold">Trồng Trên Cao Nguyên</p>
+                            </div>
+                            <div class="text-center bg-white bg-opacity-20 rounded-lg p-4">
+                                <i class="fas fa-fire text-3xl text-orange-300 mb-2"></i>
+                                <p class="text-sm font-semibold">Rang Tươi Mới</p>
+                            </div>
+                            <div class="text-center bg-white bg-opacity-20 rounded-lg p-4">
+                                <i class="fas fa-shipping-fast text-3xl text-blue-300 mb-2"></i>
+                                <p class="text-sm font-semibold">Giao Hàng Nhanh</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Action Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button onclick="scrollToSection('products')" class="bg-yellow-400 text-amber-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-all transform hover:scale-105 shadow-lg">
+                            <i class="fas fa-shopping-bag mr-2"></i>Mua Ngay
+                        </button>
+                        <button onclick="scrollToSection('about')" class="border-3 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-amber-800 transition-all transform hover:scale-105 shadow-lg">
+                            <i class="fas fa-info-circle mr-2"></i>Tìm Hiểu Thêm
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Right Content - Enhanced Product Showcase -->
+                <div class="fade-in">
+                    <div class="bg-white rounded-3xl p-8 shadow-2xl transform hover:scale-105 transition-transform">
+                        <div class="text-center mb-6">
+                            <div class="bg-gradient-to-r from-amber-800 to-orange-800 text-white rounded-full px-6 py-2 inline-block mb-4">
+                                <span class="font-bold">⭐ BESTSELLER</span>
+                            </div>
+                            <h3 class="text-3xl font-bold text-amber-800 mb-2">Sản Phẩm Nổi Bật</h3>
+                            <div class="w-20 h-1 bg-gradient-to-r from-amber-800 to-orange-800 mx-auto"></div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <!-- Enhanced Product Image -->
+                            <div class="w-56 h-56 mx-auto mb-6 rounded-full overflow-hidden shadow-lg relative">
+                                <img src="https://kantata.vn/wp-content/uploads/2021/05/Ca-phe-Arabica-Da-Lat-Kantata-1.jpg" 
+                                     alt="Cà Phê Cao Nguyên Đà Lạt" 
+                                     class="w-full h-full object-cover"
+                                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="absolute inset-0 bg-gradient-to-br from-amber-50 to-amber-100 flex items-center justify-center shadow-inner" style="display: none;">
+                                    <div class="absolute inset-0 bg-gradient-to-br from-transparent to-amber-200 opacity-50"></div>
+                                    <svg width="140" height="140" viewBox="0 0 140 140" class="text-amber-800 relative z-10">
+                                        <!-- Coffee bag -->
+                                        <rect x="40" y="50" width="60" height="70" rx="8" fill="currentColor"/>
+                                        <rect x="45" y="55" width="50" height="60" rx="5" fill="#8B4513"/>
+                                        
+                                        <!-- Coffee beans -->
+                                        <ellipse cx="70" cy="75" rx="8" ry="12" fill="#D2691E"/>
+                                        <ellipse cx="60" cy="85" rx="6" ry="9" fill="#D2691E"/>
+                                        <ellipse cx="80" cy="85" rx="6" ry="9" fill="#D2691E"/>
+                                        <ellipse cx="70" cy="95" rx="7" ry="10" fill="#D2691E"/>
+                                        
+                                        <!-- Label -->
+                                        <rect x="50" y="100" width="40" height="10" rx="2" fill="white"/>
+                                        <text x="70" y="107" text-anchor="middle" fill="#8B4513" font-size="6" font-weight="bold">GOLDEN BREW</text>
+                                        
+                                        <!-- Steam -->
+                                        <path d="M75 45 Q80 35, 75 25 Q70 35, 75 45" stroke="#D2691E" stroke-width="2" fill="none" opacity="0.7"/>
+                                        <path d="M65 45 Q70 35, 65 25 Q60 35, 65 45" stroke="#D2691E" stroke-width="2" fill="none" opacity="0.5"/>
+                                        <path d="M85 45 Q90 35, 85 25 Q80 35, 85 45" stroke="#D2691E" stroke-width="2" fill="none" opacity="0.6"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            
+                            <h4 class="text-2xl font-bold text-gray-800 mb-3">Cà Phê Cao Nguyên Đà Lạt</h4>
+                            <p class="text-gray-600 mb-4 leading-relaxed">Cà phê đậm đà, thơm ngon từ vùng trồng hàng đầu Việt Nam với hương vị chocolate và caramel</p>
+                            <div class="bg-amber-50 rounded-lg p-3 mb-4">
+                                <p class="text-sm text-amber-800 font-semibold">📦 Gói 500g - Xay sẵn hoặc nguyên hạt</p>
+                            </div>
+                            
+                            <!-- Rating -->
+                            <div class="flex justify-center items-center mb-4">
+                                <div class="flex text-yellow-400 mr-2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="text-gray-600 text-sm">(127 đánh giá)</span>
+                            </div>
+                            
+                            <!-- Price and Action -->
+                            <div class="bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl p-6 mb-6">
+                                <div class="text-3xl font-bold text-amber-800 mb-2">599.000đ</div>
+                                <p class="text-sm text-gray-600 mb-4">Miễn phí vận chuyển cho đơn hàng trên 1.200.000đ</p>
+                                <button onclick="addToCart('Cà Phê Cao Nguyên Đà Lạt', 599000)" class="w-full bg-gradient-to-r from-amber-800 to-orange-800 text-white py-4 rounded-xl hover:from-amber-900 hover:to-orange-900 transition-all transform hover:scale-105 font-bold text-lg shadow-lg">
+                                    <i class="fas fa-cart-plus mr-2"></i>Thêm Vào Giỏ
+                                </button>
+                            </div>
+                            
+                            <!-- Trust Badges -->
+                            <div class="flex justify-center space-x-4 text-xs text-gray-500">
+                                <div class="flex items-center">
+                                    <i class="fas fa-shield-alt text-green-500 mr-1"></i>
+                                    <span>Secure Payment</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-truck text-blue-500 mr-1"></i>
+                                    <span>Fast Delivery</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Stats Section -->
+            <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 fade-in">
+                <div class="text-center bg-white bg-opacity-10 rounded-2xl p-6 backdrop-blur-sm">
+                    <div class="text-4xl font-bold text-yellow-300 mb-2">15+</div>
+                    <div class="text-white text-sm">Năm Kinh Nghiệm</div>
+                </div>
+                <div class="text-center bg-white bg-opacity-10 rounded-2xl p-6 backdrop-blur-sm">
+                    <div class="text-4xl font-bold text-yellow-300 mb-2">50+</div>
+                    <div class="text-white text-sm">Loại Cà Phê</div>
+                </div>
+                <div class="text-center bg-white bg-opacity-10 rounded-2xl p-6 backdrop-blur-sm">
+                    <div class="text-4xl font-bold text-yellow-300 mb-2">1000+</div>
+                    <div class="text-white text-sm">Khách Hàng Hài Lòng</div>
+                </div>
+                <div class="text-center bg-white bg-opacity-10 rounded-2xl p-6 backdrop-blur-sm">
+                    <div class="text-4xl font-bold text-yellow-300 mb-2">24/7</div>
+                    <div class="text-white text-sm">Hỗ Trợ Khách Hàng</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page 2: About Us -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Về Cà Phê Sài Gòn</h2>
+                <div class="w-24 h-1 bg-amber-800 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Mang đến cho bạn hương vị chính hiệu của văn hóa cà phê Việt Nam với những hạt cà phê chất lượng cao và phương pháp pha chế truyền thống.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-6">Giá Trị Cốt Lõi Của Chúng Tôi</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-amber-800 text-white rounded-full p-3 mr-4 flex-shrink-0">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-gray-800 mb-2">Chất Lượng Cao Cấp</h4>
+                                <p class="text-gray-600">Hạt cà phê được tuyển chọn thủ công từ những vùng trồng cà phê tốt nhất Việt Nam, đảm bảo hương vị đặc biệt trong từng tách.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-amber-800 text-white rounded-full p-3 mr-4 flex-shrink-0">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-gray-800 mb-2">Di Sản Truyền Thống</h4>
+                                <p class="text-gray-600">Bảo tồn văn hóa cà phê Việt Nam chính hiệu với kỹ thuật rang và pha chế được truyền lại qua nhiều thế hệ.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-amber-800 text-white rounded-full p-3 mr-4 flex-shrink-0">
+                                <i class="fas fa-shipping-fast"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-gray-800 mb-2">Giao Hàng Tươi Mới</h4>
+                                <p class="text-gray-600">Trực tiếp từ xưởng rang đến tận nhà bạn, đảm bảo độ tươi mới và hương vị tối đa trong mỗi gói hàng.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fade-in">
+                    <div class="bg-white rounded-2xl p-8 shadow-lg">
+                        <div class="text-center">
+                            <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden shadow-lg">
+                                <img src="https://i.postimg.cc/76LxsKpB/Real.jpg" 
+                                     alt="Đại Dương - Người Sáng Lập" 
+                                     class="w-full h-full object-cover"
+                                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="w-full h-full bg-gradient-to-br from-amber-200 to-amber-300 flex items-center justify-center" style="display: none;">
+                                    <svg width="80" height="80" viewBox="0 0 80 80" class="text-amber-800">
+                                        <circle cx="40" cy="35" r="15" fill="currentColor"/>
+                                        <path d="M25 50 Q40 45, 55 50 Q40 65, 25 50" fill="currentColor" opacity="0.8"/>
+                                        <circle cx="35" cy="32" r="2" fill="white"/>
+                                        <circle cx="45" cy="32" r="2" fill="white"/>
+                                        <path d="M35 40 Q40 45, 45 40" stroke="white" stroke-width="2" fill="none"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            
+                            <h4 class="text-2xl font-bold text-gray-800 mb-2">Đại Dương</h4>
+                            <p class="text-amber-800 font-semibold mb-4">Người Sáng Lập & Thầy Rang Cà Phê</p>
+                            
+                            <p class="text-gray-600 leading-relaxed">
+                                "Lớn lên trong một gia đình trồng cà phê ở Đà Lạt, tôi hiểu rằng cà phê ngon không chỉ là một thức uống—đó là sự kết nối với đất đai, văn hóa và cộng đồng của chúng ta. Cà Phê Sài Gòn ra đời từ niềm đam mê chia sẻ di sản cà phê tuyệt vời của Việt Nam với thế giới, từng hạt cà phê rang hoàn hảo một."
+                            </p>
+                            
+                            <div class="mt-6 flex justify-center space-x-4">
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-amber-800">15+</div>
+                                    <div class="text-sm text-gray-600">Năm Kinh Nghiệm</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-amber-800">50+</div>
+                                    <div class="text-sm text-gray-600">Loại Cà Phê</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-amber-800">1000+</div>
+                                    <div class="text-sm text-gray-600">Khách Hàng Hài Lòng</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Pages 3-4: Product Pages -->
+    <section id="products" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Bộ Sưu Tập Cà Phê Cao Cấp</h2>
+                <div class="w-24 h-1 bg-amber-800 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Khám phá bộ sưu tập cà phê Việt Nam được tuyển chọn kỹ lưỡng, mỗi loại đều kể một câu chuyện riêng độc đáo.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in">
+                    <div class="h-64 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center relative overflow-hidden">
+                        <img src="https://kantata.vn/wp-content/uploads/2021/05/Ca-phe-Arabica-Da-Lat-Kantata-1.jpg" 
+                             alt="Cà Phê Cao Nguyên Đà Lạt" 
+                             class="w-full h-full object-cover"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="absolute inset-0 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center" style="display: none;">
+                            <svg width="120" height="120" viewBox="0 0 120 120" class="text-amber-800">
+                                <rect x="30" y="40" width="60" height="50" rx="8" fill="currentColor"/>
+                                <rect x="35" y="45" width="50" height="40" rx="5" fill="#8B4513"/>
+                                <circle cx="60" cy="65" r="15" fill="#D2691E"/>
+                                <text x="60" y="70" text-anchor="middle" fill="white" font-size="8" font-weight="bold">DALAT</text>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Cà Phê Cao Nguyên Đà Lạt</h3>
+                        <p class="text-gray-600 mb-3">Cà phê đậm đà, thơm ngon với hương vị chocolate và caramel. Trồng trên cao nguyên mát mẻ Đà Lạt ở độ cao 1.500m.</p>
+                        <div class="bg-amber-50 rounded-lg p-2 mb-4">
+                            <p class="text-sm text-amber-800 font-semibold">📦 Gói 500g - Xay sẵn hoặc nguyên hạt</p>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-amber-800">599.000đ</span>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="text-gray-600 ml-2">(127 đánh giá)</span>
+                            </div>
+                        </div>
+                        <button onclick="addToCart('Cà Phê Cao Nguyên Đà Lạt', 599000)" class="w-full bg-amber-800 text-white py-3 rounded-lg hover:bg-amber-900 transition-colors">
+                            Thêm Vào Giỏ
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in">
+                    <div class="h-64 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center relative overflow-hidden">
+                        <img src="https://bmgroup.asia/wp-content/uploads/2021/05/ca-phe-sach-nguyen-chat-bmt.jpg" 
+                             alt="Cà Phê Robusta Buôn Ma Thuột" 
+                             class="w-full h-full object-cover"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="absolute inset-0 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center" style="display: none;">
+                            <svg width="120" height="120" viewBox="0 0 120 120" class="text-green-800">
+                                <rect x="30" y="40" width="60" height="50" rx="8" fill="currentColor"/>
+                                <rect x="35" y="45" width="50" height="40" rx="5" fill="#2D5016"/>
+                                <circle cx="60" cy="65" r="15" fill="#4A7C59"/>
+                                <text x="60" y="70" text-anchor="middle" fill="white" font-size="7" font-weight="bold">ROBUSTA</text>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Cà Phê Robusta Buôn Ma Thuột</h3>
+                        <p class="text-gray-600 mb-3">Đậm đà và mạnh mẽ với hương vị đất. Hạt robusta nổi tiếng từ thủ đô cà phê Buôn Ma Thuột.</p>
+                        <div class="bg-green-50 rounded-lg p-2 mb-4">
+                            <p class="text-sm text-green-800 font-semibold">📦 Gói 500g - Xay thô hoặc nguyên hạt</p>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-amber-800">499.000đ</span>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="text-gray-600 ml-2">(89 đánh giá)</span>
+                            </div>
+                        </div>
+                        <button onclick="addToCart('Cà Phê Robusta Buôn Ma Thuột', 499000)" class="w-full bg-amber-800 text-white py-3 rounded-lg hover:bg-amber-900 transition-colors">
+                            Thêm Vào Giỏ
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in">
+                    <div class="h-64 bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center relative overflow-hidden">
+                        <img src="https://salt.tikicdn.com/cache/750x750/ts/product/36/33/11/315206210ea268e514aa444567efb428.jpg.webp" 
+                             alt="Cà Phê Sài Gòn Buổi Sáng" 
+                             class="w-full h-full object-cover"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="absolute inset-0 bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center" style="display: none;">
+                            <svg width="120" height="120" viewBox="0 0 120 120" class="text-purple-800">
+                                <rect x="30" y="40" width="60" height="50" rx="8" fill="currentColor"/>
+                                <rect x="35" y="45" width="50" height="40" rx="5" fill="#4C1D95"/>
+                                <circle cx="60" cy="65" r="15" fill="#7C3AED"/>
+                                <text x="60" y="70" text-anchor="middle" fill="white" font-size="8" font-weight="bold">BLEND</text>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Cà Phê Sài Gòn Buổi Sáng</h3>
+                        <p class="text-gray-600 mb-3">Sự cân bằng hoàn hảo giữa arabica và robusta với hương vị vani và gia vị. Lấy cảm hứng từ những buổi sáng nhộn nhịp Sài Gòn.</p>
+                        <div class="bg-purple-50 rounded-lg p-2 mb-4">
+                            <p class="text-sm text-purple-800 font-semibold">📦 Gói 500g - Blend xay vừa</p>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-amber-800">579.000đ</span>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="text-gray-600 ml-2">(156 đánh giá)</span>
+                            </div>
+                        </div>
+                        <button onclick="addToCart('Cà Phê Sài Gòn Buổi Sáng', 579000)" class="w-full bg-amber-800 text-white py-3 rounded-lg hover:bg-amber-900 transition-colors">
+                            Thêm Vào Giỏ
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in">
+                    <div class="h-64 bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center relative overflow-hidden">
+                        <img src="https://product.hstatic.net/1000274203/product/do_rang_va_huong_vi_ca_phe_nguyen_chat_arabica_cau_dat_e698fc96fc794a3e97f989325f2bfe48_1024x1024.jpg" 
+                             alt="Cà Phê Arabica Cầu Đất Đặc Biệt" 
+                             class="w-full h-full object-cover"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="absolute inset-0 bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center" style="display: none;">
+                            <svg width="120" height="120" viewBox="0 0 120 120" class="text-red-800">
+                                <rect x="30" y="40" width="60" height="50" rx="8" fill="currentColor"/>
+                                <rect x="35" y="45" width="50" height="40" rx="5" fill="#991B1B"/>
+                                <circle cx="60" cy="65" r="15" fill="#DC2626"/>
+                                <text x="60" y="70" text-anchor="middle" fill="white" font-size="7" font-weight="bold">ARABICA</text>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Cà Phê Arabica Cầu Đất Đặc Biệt</h3>
+                        <p class="text-gray-600 mb-3">Arabica cao cấp nguồn gốc đơn với hương thơm hoa và vị chua sáng. Thu hoạch giới hạn từ cao nguyên Cầu Đất.</p>
+                        <div class="bg-red-50 rounded-lg p-2 mb-4">
+                            <p class="text-sm text-red-800 font-semibold">📦 Gói 250g - Nguyên hạt cao cấp</p>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-amber-800">749.000đ</span>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="text-gray-600 ml-2">(73 đánh giá)</span>
+                            </div>
+                        </div>
+                        <button onclick="addToCart('Cà Phê Arabica Cầu Đất Đặc Biệt', 749000)" class="w-full bg-amber-800 text-white py-3 rounded-lg hover:bg-amber-900 transition-colors">
+                            Thêm Vào Giỏ
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in">
+                    <div class="h-64 bg-gradient-to-br from-yellow-100 to-yellow-200 flex items-center justify-center relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=400&h=300&fit=crop&crop=center" 
+                             alt="Cà Phê Chế Biến Mật Ong Đặc Biệt" 
+                             class="w-full h-full object-cover"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="absolute inset-0 bg-gradient-to-br from-yellow-100 to-yellow-200 flex items-center justify-center" style="display: none;">
+                            <svg width="120" height="120" viewBox="0 0 120 120" class="text-yellow-800">
+                                <rect x="30" y="40" width="60" height="50" rx="8" fill="currentColor"/>
+                                <rect x="35" y="45" width="50" height="40" rx="5" fill="#92400E"/>
+                                <circle cx="60" cy="65" r="15" fill="#F59E0B"/>
+                                <text x="60" y="70" text-anchor="middle" fill="white" font-size="8" font-weight="bold">HONEY</text>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Cà Phê Chế Biến Mật Ong Đặc Biệt</h3>
+                        <p class="text-gray-600 mb-3">Cà phê chế biến mật ong độc đáo với vị ngọt tự nhiên và hương trái cây. Món quà hiếm có dành cho những người sành cà phê.</p>
+                        <div class="bg-yellow-50 rounded-lg p-2 mb-4">
+                            <p class="text-sm text-yellow-800 font-semibold">📦 Gói 200g - Nguyên hạt đặc biệt</p>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-amber-800">879.000đ</span>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="text-gray-600 ml-2">(45 đánh giá)</span>
+                            </div>
+                        </div>
+                        <button onclick="addToCart('Cà Phê Chế Biến Mật Ong Đặc Biệt', 879000)" class="w-full bg-amber-800 text-white py-3 rounded-lg hover:bg-amber-900 transition-colors">
+                            Thêm Vào Giỏ
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden fade-in">
+                    <div class="h-64 bg-gradient-to-br from-indigo-100 to-indigo-200 flex items-center justify-center relative overflow-hidden">
+                        <img src="https://bachcoffee.com/Resources/BachCoffee/Files/San-pham/Ca%20Phe%20Bot%20Moc%201.jpg" 
+                             alt="Cà Phê Không Caffeine Swiss Water" 
+                             class="w-full h-full object-cover"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="absolute inset-0 bg-gradient-to-br from-indigo-100 to-indigo-200 flex items-center justify-center" style="display: none;">
+                            <svg width="120" height="120" viewBox="0 0 120 120" class="text-indigo-800">
+                                <rect x="30" y="40" width="60" height="50" rx="8" fill="currentColor"/>
+                                <rect x="35" y="45" width="50" height="40" rx="5" fill="#3730A3"/>
+                                <circle cx="60" cy="65" r="15" fill="#4F46E5"/>
+                                <text x="60" y="70" text-anchor="middle" fill="white" font-size="7" font-weight="bold">DECAF</text>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Cà Phê Không Caffeine Swiss Water</h3>
+                        <p class="text-gray-600 mb-3">Hương vị đầy đủ mà không có caffeine. Chế biến bằng phương pháp Swiss Water để giữ nguyên hương vị đậm đà của blend đặc trưng.</p>
+                        <div class="bg-indigo-50 rounded-lg p-2 mb-4">
+                            <p class="text-sm text-indigo-800 font-semibold">📦 Gói 500g - Xay sẵn không caffeine</p>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-amber-800">679.000đ</span>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="text-gray-600 ml-2">(62 đánh giá)</span>
+                            </div>
+                        </div>
+                        <button onclick="addToCart('Cà Phê Không Caffeine Swiss Water', 679000)" class="w-full bg-amber-800 text-white py-3 rounded-lg hover:bg-amber-900 transition-colors">
+                            Thêm Vào Giỏ
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page 5: Customer Reviews -->
+    <section id="reviews" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Khách Hàng Nói Gì Về Chúng Tôi</h2>
+                <div class="w-24 h-1 bg-amber-800 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Tham gia cùng hàng nghìn người yêu cà phê hài lòng đã biến Golden Brew thành thói quen hàng ngày của họ.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <!-- Review 1 -->
+                <div class="review-card rounded-2xl p-6 fade-in">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                            HM
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Hoàng Minh</h4>
+                            <p class="text-sm text-gray-600">Người Yêu Cà Phê</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "Cà phê Cao Nguyên Đà Lạt thật sự tuyệt vời! Hương vị chocolate đậm đà và vị hoàn thiện mượt mà khiến nó trở thành cà phê buổi sáng không thể thiếu của tôi. Golden Brew thực sự đã thành thạo nghệ thuật cà phê Việt Nam."
+                    </p>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-card rounded-2xl p-6 fade-in">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-pink-400 to-pink-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                            TL
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Thảo Linh</h4>
+                            <p class="text-sm text-gray-600">Food Blogger</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "Tôi đã thử cà phê từ khắp nơi trên thế giới, nhưng Cà Phê Sài Gòn Buổi Sáng của Golden Brew thật đặc biệt. Sự cân bằng hoàn hảo của hương vị và câu chuyện đằng sau mỗi tách khiến từng ngụm đều có ý nghĩa."
+                    </p>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-card rounded-2xl p-6 fade-in">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                            DT
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Đức Thành</h4>
+                            <p class="text-sm text-gray-600">Chủ Doanh Nghiệp</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "Chất lượng xuất sắc và giao hàng luôn đúng hẹn. Đội ngũ văn phòng của tôi nghiện blend Robusta - nó cho chúng tôi năng lượng hoàn hảo cho những ngày bận rộn!"
+                    </p>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="review-card rounded-2xl p-6 fade-in">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                            MH
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Mai Hương</h4>
+                            <p class="text-sm text-gray-600">Giáo Viên</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "Là người nhạy cảm với caffeine, Cà Phê Không Caffeine Swiss Water thật sự thay đổi cuộc sống tôi. Tôi có thể thưởng thức hương vị đầy đủ mà không bị lo lắng. Cảm ơn Golden Brew vì không thỏa hiệp về hương vị!"
+                    </p>
+                </div>
+
+                <!-- Review 5 -->
+                <div class="review-card rounded-2xl p-6 fade-in">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                            VK
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Văn Khang</h4>
+                            <p class="text-sm text-gray-600">Đầu Bếp</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "Cà Phê Chế Biến Mật Ong Đặc Biệt thật phi thường! Vị ngọt tự nhiên và hương vị phức tạp làm cho nó hoàn hảo để kết hợp với món tráng miệng tại nhà hàng. Khách hàng luôn hỏi về nó."
+                    </p>
+                </div>
+
+                <!-- Review 6 -->
+                <div class="review-card rounded-2xl p-6 fade-in">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-teal-400 to-teal-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                            LN
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Lan Nguyễn</h4>
+                            <p class="text-sm text-gray-600">Giám Đốc Marketing</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "Là người Việt Nam sinh sống ở nước ngoài, việc tìm được cà phê Việt Nam chính hiệu rất quan trọng với tôi. Golden Brew mang lại những kỷ niệm về nghi lễ cà phê buổi sáng của bà ngoại tôi. Hoàn toàn chính hiệu và ngon tuyệt!"
+                    </p>
+                </div>
+            </div>
+
+            <!-- Newsletter Signup -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg fade-in">
+                <div class="text-center mb-8">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-4">Kết Nối Với Chúng Tôi</h3>
+                    <p class="text-gray-600 max-w-2xl mx-auto">
+                        Tham gia cộng đồng cà phê của chúng tôi và là người đầu tiên biết về các blend mới, mẹo pha chế, và ưu đãi độc quyền.
+                    </p>
+                </div>
+                
+                <form onsubmit="subscribeNewsletter(event)" class="max-w-md mx-auto">
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <input 
+                            type="email" 
+                            id="newsletter-email"
+                            placeholder="Nhập địa chỉ email của bạn" 
+                            required
+                            class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-800 focus:border-transparent"
+                        >
+                        <button 
+                            type="submit"
+                            class="bg-amber-800 text-white px-6 py-3 rounded-lg hover:bg-amber-900 transition-colors font-semibold whitespace-nowrap"
+                        >
+                            Đăng Ký
+                        </button>
+                    </div>
+                    <p class="text-sm text-gray-500 mt-3 text-center">
+                        Chúng tôi tôn trọng quyền riêng tư của bạn. Hủy đăng ký bất cứ lúc nào.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page 6: Footer -->
+    <footer id="contact" class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="fade-in">
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-coffee text-3xl text-yellow-400 mr-3"></i>
+                        <h3 class="text-2xl font-bold">Cà Phê Sài Gòn</h3>
+                    </div>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Mang đến cho bạn hương vị chính hiệu của văn hóa cà phê Việt Nam với những hạt cà phê chất lượng cao và phương pháp pha chế truyền thống.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/caphesaigon" target="_blank" rel="noopener noreferrer" class="bg-blue-600 hover:bg-blue-700 p-3 rounded-full transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com/caphesaigon" target="_blank" rel="noopener noreferrer" class="bg-pink-600 hover:bg-pink-700 p-3 rounded-full transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://youtube.com/caphesaigon" target="_blank" rel="noopener noreferrer" class="bg-red-600 hover:bg-red-700 p-3 rounded-full transition-colors">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://zalo.me/caphesaigon" target="_blank" rel="noopener noreferrer" class="bg-blue-500 hover:bg-blue-600 p-3 rounded-full transition-colors">
+                            <i class="fas fa-comment"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="fade-in">
+                    <h4 class="text-xl font-semibold mb-6">Thông Tin Liên Hệ</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-yellow-400 mt-1 mr-3"></i>
+                            <div>
+                                <p class="text-gray-300">123 Đường Cà Phê</p>
+                                <p class="text-gray-300">Quận 1, Thành phố Hồ Chí Minh</p>
+                                <p class="text-gray-300">Việt Nam 70000</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-yellow-400 mr-3"></i>
+                            <p class="text-gray-300">+84 (0) 123 456 789</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-yellow-400 mr-3"></i>
+                            <p class="text-gray-300">hello@caphesaigon.vn</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-yellow-400 mr-3"></i>
+                            <div>
+                                <p class="text-gray-300">Thứ 2-6: 7:00 - 20:00</p>
+                                <p class="text-gray-300">Thứ 7-CN: 8:00 - 21:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Customer Support -->
+                <div class="fade-in">
+                    <h4 class="text-xl font-semibold mb-6">Hỗ Trợ Khách Hàng</h4>
+                    <div class="space-y-3">
+                        <a href="shipping.html" class="block text-gray-300 hover:text-yellow-400 transition-colors">
+                            <i class="fas fa-shipping-fast mr-2"></i>Thông Tin Vận Chuyển
+                        </a>
+                        
+                        <a href="faq.html" class="block text-gray-300 hover:text-yellow-400 transition-colors">
+                            <i class="fas fa-question-circle mr-2"></i>Câu Hỏi Thường Gặp
+                        </a>
+                        <a href="contact-support.html" class="block text-gray-300 hover:text-yellow-400 transition-colors">
+                            <i class="fas fa-headset mr-2"></i>Liên Hệ Hỗ Trợ
+                        </a>
+                        <a href="brewing.html" class="block text-gray-300 hover:text-yellow-400 transition-colors">
+                            <i class="fas fa-coffee mr-2"></i>Hướng Dẫn Pha Chế
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Policies -->
+                <div class="fade-in">
+                    <h4 class="text-xl font-semibold mb-6">Pháp Lý & Chính Sách</h4>
+                    <div class="space-y-3">
+
+<a href="privacy.html" class="block text-gray-300 hover:text-yellow-400 transition-colors">
+  <i class="fas fa-shield-alt mr-2"></i>Chính Sách Bảo Mật
+</a>
+<a href="terms.html" class="block text-gray-300 hover:text-yellow-400 transition-colors">
+  <i class="fas fa-file-contract mr-2"></i>Điều Khoản Dịch Vụ
+</a>
+<a href="returns.html" class="block text-gray-300 hover:text-yellow-400 transition-colors">
+  <i class="fas fa-undo mr-2"></i>Chính Sách Hoàn Tiền & Đổi Trả
+</a>
+
+                        <a href="privacy.html" class="block text-gray-300 hover:text-yellow-400 transition-colors">
+                            <i class="fas fa-shield-alt mr-2"></i>Chính Sách Bảo Mật
+                        </a>
+                        
+                            <i class="fas fa-file-contract mr-2"></i>Điều Khoản Dịch Vụ
+                        </a>
+                        
+                        <div class="mt-6">
+                            <a href="http://online.gov.vn/Home/WebDetails/19168" target="_blank" rel="noopener noreferrer" class="inline-block">
+                                <img src="https://webmedia.com.vn/images/2021/09/logo-da-thong-bao-bo-cong-thuong-mau-xanh.png" alt="Bộ Công Thương Badge" class="h-16" onerror="this.style.display='none';">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-700 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">
+                        © 2024 Cà Phê Sài Gòn. Tất cả quyền được bảo lưu.
+                    </p>
+                    <div class="flex items-center mt-4 md:mt-0">
+                        <p class="text-gray-400 text-sm mr-4">Chúng tôi chấp nhận:</p>
+                        <div class="flex space-x-2">
+                            <div class="bg-white rounded px-2 py-1">
+                                <span class="text-xs font-bold text-blue-600">VISA</span>
+                            </div>
+                            <div class="bg-white rounded px-2 py-1">
+                                <span class="text-xs font-bold text-red-600">MC</span>
+                            </div>
+                            <div class="bg-white rounded px-2 py-1">
+                                <span class="text-xs font-bold text-blue-800">AMEX</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-96 overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 id="modal-title" class="text-2xl font-bold text-gray-800"></h3>
+                    <button onclick="closeModal()" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <div id="modal-content" class="text-gray-600"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-96 overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-2xl font-bold text-gray-800">
+                        <i class="fas fa-shopping-cart mr-2 text-amber-800"></i>Giỏ Hàng Của Bạn
+                    </h3>
+                    <button onclick="closeCart()" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <div id="cart-items" class="space-y-4 mb-6">
+                    <!-- Cart items will be inserted here -->
+                </div>
+                <div id="cart-total" class="border-t pt-4 mb-4">
+                    <!-- Total will be inserted here -->
+                </div>
+                <div id="cart-actions" class="flex gap-4">
+                    <!-- Action buttons will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Notification -->
+    <div id="cart-notification" class="fixed top-20 right-4 bg-emerald-500 text-white px-6 py-3 rounded-lg shadow-lg transform translate-x-full transition-transform duration-300 z-50 hidden">
+        <div class="flex items-center">
+            <i class="fas fa-check-circle mr-2"></i>
+            <span id="cart-message">Đã thêm vào giỏ hàng!</span>
+        </div>
+    </div>
+
+    <script>
+        // Cart functionality
+        let cart = [];
+        let cartCount = 0;
+        let appliedPromo = null;
+        let promoDiscount = 0;
+
+        function addToCart(productName, price) {
+            // Check if item already exists in cart
+            const existingItem = cart.find(item => item.name === productName);
+            
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ 
+                    name: productName, 
+                    price: price, 
+                    quantity: 1,
+                    id: Date.now() // Simple ID for tracking
+                });
+            }
+            
+            cartCount++;
+            updateCartButton();
+            
+            // Show notification
+            const notification = document.getElementById('cart-notification');
+            const message = document.getElementById('cart-message');
+            message.textContent = `${productName} đã được thêm vào giỏ hàng!`;
+            
+            notification.classList.remove('hidden');
+            notification.classList.remove('translate-x-full');
+            setTimeout(() => {
+                notification.classList.add('translate-x-full');
+                setTimeout(() => {
+                    notification.classList.add('hidden');
+                }, 300);
+            }, 3000);
+        }
+
+        function updateCartButton() {
+            const cartBtn = document.getElementById('cart-button');
+            if (cartBtn) {
+                cartBtn.innerHTML = `<i class="fas fa-shopping-cart mr-2"></i>Giỏ Hàng (${cartCount})`;
+                // Always show the cart button
+                cartBtn.classList.remove('hidden');
+            }
+        }
+
+        function showCart() {
+            const cartModal = document.getElementById('cart-modal');
+            const cartItems = document.getElementById('cart-items');
+            const cartTotal = document.getElementById('cart-total');
+            const cartActions = document.getElementById('cart-actions');
+            
+            // Clear previous content
+            cartItems.innerHTML = '';
+            cartTotal.innerHTML = '';
+            cartActions.innerHTML = '';
+            
+            if (cart.length === 0) {
+                cartItems.innerHTML = `
+                    <div class="text-center py-8">
+                        <i class="fas fa-shopping-cart text-6xl text-gray-300 mb-4"></i>
+                        <h4 class="text-xl font-semibold text-gray-600 mb-2">Giỏ hàng trống</h4>
+                        <p class="text-gray-500">Hãy thêm một số sản phẩm cà phê tuyệt vời!</p>
+                    </div>
+                `;
+                cartActions.innerHTML = `
+                    <button onclick="closeCart(); scrollToSection('products')" class="w-full bg-amber-800 text-white py-3 rounded-lg hover:bg-amber-900 transition-colors">
+                        Tiếp Tục Mua Sắm
+                    </button>
+                `;
+            } else {
+                // Add select all checkbox
+                cartItems.innerHTML = `
+                    <div class="flex items-center justify-between bg-amber-50 p-3 rounded-lg mb-4">
+                        <div class="flex items-center">
+                            <input type="checkbox" id="select-all" onchange="toggleSelectAll()" class="mr-3 w-4 h-4 text-amber-600 bg-gray-100 border-gray-300 rounded focus:ring-amber-500">
+                            <label for="select-all" class="font-semibold text-gray-700">Chọn tất cả sản phẩm</label>
+                        </div>
+                        <span id="selected-count" class="text-sm text-gray-600">0 sản phẩm được chọn</span>
+                    </div>
+                `;
+                
+                // Display cart items with checkboxes
+                let total = 0;
+                cart.forEach(item => {
+                    total += item.price * item.quantity;
+                    // Initialize selected property if not exists
+                    if (item.selected === undefined) {
+                        item.selected = false;
+                    }
+                    
+                    cartItems.innerHTML += `
+                        <div class="flex items-center bg-gray-50 p-4 rounded-lg mb-2">
+                            <input type="checkbox" id="item-${item.id}" ${item.selected ? 'checked' : ''} onchange="toggleItemSelection(${item.id})" class="mr-4 w-4 h-4 text-amber-600 bg-gray-100 border-gray-300 rounded focus:ring-amber-500">
+                            <div class="flex-1 flex items-center justify-between">
+                                <div class="flex-1">
+                                    <h4 class="font-semibold text-gray-800">${item.name}</h4>
+                                    <p class="text-amber-800 font-bold">${item.price.toLocaleString('vi-VN')}đ x ${item.quantity}</p>
+                                    <p class="text-sm text-gray-600">Tổng: ${(item.price * item.quantity).toLocaleString('vi-VN')}đ</p>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <button onclick="updateQuantity(${item.id}, -1)" class="bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-minus text-sm"></i>
+                                    </button>
+                                    <span class="font-semibold w-8 text-center">${item.quantity}</span>
+                                    <button onclick="updateQuantity(${item.id}, 1)" class="bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-plus text-sm"></i>
+                                    </button>
+                                    <button onclick="removeFromCart(${item.id})" class="text-red-500 hover:text-red-700 ml-2">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                // Calculate selected items total
+                const selectedItems = cart.filter(item => item.selected);
+                const selectedTotal = selectedItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+                
+                // Display total with promo
+                let finalTotal = total;
+                let selectedFinalTotal = selectedTotal;
+                let promoHtml = '';
+                
+                if (appliedPromo && promoDiscount > 0) {
+                    finalTotal = total - promoDiscount;
+                    // Apply promo only to selected items
+                    const selectedPromoDiscount = selectedItems.length > 0 ? (promoDiscount * selectedTotal / total) : 0;
+                    selectedFinalTotal = selectedTotal - selectedPromoDiscount;
+                    
+                    promoHtml = `
+                        <div class="flex justify-between items-center text-lg border-t pt-2 mt-2">
+                            <span class="text-gray-600">Tổng giỏ hàng:</span>
+                            <span class="text-gray-600">${total.toLocaleString('vi-VN')}đ</span>
+                        </div>
+                        <div class="flex justify-between items-center text-lg text-green-600">
+                            <span>Giảm giá (${appliedPromo}):</span>
+                            <span>-${promoDiscount.toLocaleString('vi-VN')}đ</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <button onclick="removePromo()" class="text-red-500 hover:text-red-700 text-sm">
+                                <i class="fas fa-times mr-1"></i>Bỏ mã giảm giá
+                            </button>
+                        </div>
+                    `;
+                }
+                
+                // Update selected count
+                updateSelectedCount();
+                
+                cartTotal.innerHTML = `
+                    ${promoHtml}
+                    <div class="bg-blue-50 p-4 rounded-lg mb-4">
+                        <div class="flex justify-between items-center text-lg font-semibold text-blue-800">
+                            <span>Sản phẩm được chọn:</span>
+                            <span>${selectedFinalTotal.toLocaleString('vi-VN')}đ</span>
+                        </div>
+                        <p class="text-sm text-blue-600 mt-1">${selectedItems.length} sản phẩm được chọn để thanh toán</p>
+                    </div>
+                    <div class="flex justify-between items-center text-xl font-bold ${appliedPromo ? 'border-t pt-2 mt-2' : ''}">
+                        <span>Tổng giỏ hàng:</span>
+                        <span class="text-amber-800">${finalTotal.toLocaleString('vi-VN')}đ</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">
+                        ${selectedFinalTotal >= 1200000 ? '🎉 Miễn phí vận chuyển cho sản phẩm được chọn!' : selectedItems.length > 0 ? `Thêm ${(1200000 - selectedFinalTotal).toLocaleString('vi-VN')}đ vào sản phẩm được chọn để được miễn phí vận chuyển` : 'Chọn sản phẩm để xem thông tin vận chuyển'}
+                    </p>
+                    
+                    <!-- Promo Code Input -->
+                    <div class="mt-4 p-4 bg-gray-50 rounded-lg">
+                        <div class="flex gap-2">
+                            <input type="text" id="promo-input" placeholder="Nhập mã giảm giá" 
+                                   class="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-800 focus:border-transparent text-sm">
+                            <button onclick="applyPromoFromInput()" class="bg-amber-800 text-white px-4 py-2 rounded-lg hover:bg-amber-900 transition-colors text-sm">
+                                Áp dụng
+                            </button>
+                        </div>
+                        <div class="mt-2 text-xs text-gray-500">
+                            Mã có sẵn: COFFEE20, WELCOME15, BUNDLE30
+                        </div>
+                    </div>
+                `;
+                
+                // Display action buttons
+                cartActions.innerHTML = `
+                    <button onclick="clearCart()" class="flex-1 bg-gray-500 text-white py-3 rounded-lg hover:bg-gray-600 transition-colors">
+                        Xóa Tất Cả
+                    </button>
+                    <button onclick="checkoutSelected()" class="flex-1 bg-amber-800 text-white py-3 rounded-lg hover:bg-amber-900 transition-colors ${selectedItems.length === 0 ? 'opacity-50 cursor-not-allowed' : ''}" ${selectedItems.length === 0 ? 'disabled' : ''}>
+                        Thanh Toán (${selectedItems.length})
+                    </button>
+                `;
+            }
+            
+            cartModal.classList.remove('hidden');
+        }
+
+        function closeCart() {
+            document.getElementById('cart-modal').classList.add('hidden');
+        }
+
+        function updateQuantity(itemId, change) {
+            const item = cart.find(item => item.id === itemId);
+            if (item) {
+                item.quantity += change;
+                if (item.quantity <= 0) {
+                    removeFromCart(itemId);
+                    return;
+                }
+                
+                // Update cart count
+                cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+                
+                // Check if promo code is still valid after quantity change
+                validatePromoCode();
+                
+                updateCartButton();
+                showCart(); // Refresh cart display
+            }
+        }
+
+        function removeFromCart(itemId) {
+            const itemIndex = cart.findIndex(item => item.id === itemId);
+            if (itemIndex > -1) {
+                cartCount -= cart[itemIndex].quantity;
+                cart.splice(itemIndex, 1);
+                
+                // Check if promo code is still valid after item removal
+                validatePromoCode();
+                
+                updateCartButton();
+                showCart(); // Refresh cart display
+            }
+        }
+
+        function validatePromoCode() {
+            if (!appliedPromo) return;
+            
+            const promo = promoCodes[appliedPromo];
+            if (!promo) return;
+            
+            const cartTotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            
+            // Check minimum order requirement
+            if (cartTotal < promo.minOrder) {
+                appliedPromo = null;
+                promoDiscount = 0;
+                showNotification(`Mã giảm giá đã bị hủy do không đạt đơn tối thiểu ${promo.minOrder.toLocaleString('vi-VN')}đ`, 'error');
+                return;
+            }
+            
+            // Check bundle requirement for BUNDLE30
+            if (appliedPromo === 'BUNDLE30' && cart.length < 3) {
+                appliedPromo = null;
+                promoDiscount = 0;
+                showNotification('Mã giảm giá đã bị hủy do không đủ 3 sản phẩm!', 'error');
+                return;
+            }
+            
+            // Recalculate discount with new total
+            if (promo.type === 'percentage') {
+                promoDiscount = cartTotal * promo.discount;
+            } else {
+                promoDiscount = promo.discount;
+            }
+        }
+
+        function clearCart() {
+            cart = [];
+            cartCount = 0;
+            appliedPromo = null;
+            promoDiscount = 0;
+            updateCartButton();
+            showCart(); // Refresh cart display
+        }
+
+        function applyPromoFromInput() {
+            const promoInput = document.getElementById('promo-input');
+            const promoCode = promoInput.value.trim().toUpperCase();
+            
+            if (!promoCode) {
+                showNotification('Vui lòng nhập mã giảm giá!', 'error');
+                return;
+            }
+            
+            applyPromo(promoCode);
+            promoInput.value = '';
+        }
+
+        function removePromo() {
+            appliedPromo = null;
+            promoDiscount = 0;
+            showNotification('Đã bỏ mã giảm giá!', 'success');
+            showCart(); // Refresh cart display
+        }
+
+        function toggleSelectAll() {
+            const selectAllCheckbox = document.getElementById('select-all');
+            const isChecked = selectAllCheckbox.checked;
+            
+            cart.forEach(item => {
+                item.selected = isChecked;
+            });
+            
+            showCart(); // Refresh cart display
+        }
+
+        function toggleItemSelection(itemId) {
+            const item = cart.find(item => item.id === itemId);
+            if (item) {
+                item.selected = !item.selected;
+                updateSelectedCount();
+                updateSelectAllCheckbox();
+                updateCheckoutButton();
+            }
+        }
+
+        function updateSelectedCount() {
+            const selectedItems = cart.filter(item => item.selected);
+            const countElement = document.getElementById('selected-count');
+            if (countElement) {
+                countElement.textContent = `${selectedItems.length} sản phẩm được chọn`;
+            }
+        }
+
+        function updateSelectAllCheckbox() {
+            const selectAllCheckbox = document.getElementById('select-all');
+            if (selectAllCheckbox) {
+                const selectedItems = cart.filter(item => item.selected);
+                selectAllCheckbox.checked = selectedItems.length === cart.length && cart.length > 0;
+                selectAllCheckbox.indeterminate = selectedItems.length > 0 && selectedItems.length < cart.length;
+            }
+        }
+
+        function updateCheckoutButton() {
+            const selectedItems = cart.filter(item => item.selected);
+            const checkoutBtn = document.querySelector('button[onclick="checkoutSelected()"]');
+            if (checkoutBtn) {
+                checkoutBtn.textContent = `Thanh Toán (${selectedItems.length})`;
+                if (selectedItems.length === 0) {
+                    checkoutBtn.classList.add('opacity-50', 'cursor-not-allowed');
+                    checkoutBtn.disabled = true;
+                } else {
+                    checkoutBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+                    checkoutBtn.disabled = false;
+                }
+            }
+        }
+
+        function checkoutSelected() {
+            const selectedItems = cart.filter(item => item.selected);
+            if (selectedItems.length === 0) {
+                showNotification('Vui lòng chọn ít nhất một sản phẩm để thanh toán!', 'error');
+                return;
+            }
+            
+            const selectedTotal = selectedItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            
+            // Calculate promo discount for selected items only
+            let selectedPromoDiscount = 0;
+            if (appliedPromo && promoDiscount > 0) {
+                selectedPromoDiscount = (promoDiscount * selectedTotal / total);
+            }
+            
+            const finalTotal = selectedTotal - selectedPromoDiscount;
+            
+            // Show checkout confirmation
+            const cartModal = document.getElementById('cart-modal');
+            const cartItems = document.getElementById('cart-items');
+            
+            let promoInfo = '';
+            if (appliedPromo && selectedPromoDiscount > 0) {
+                promoInfo = `
+                    <div class="text-sm text-green-600 mb-2">
+                        <i class="fas fa-tag mr-1"></i>Đã áp dụng mã ${appliedPromo}: -${selectedPromoDiscount.toLocaleString('vi-VN')}đ
+                    </div>
+                `;
+            }
+            
+            // Create order summary
+            let orderSummary = '';
+            selectedItems.forEach(item => {
+                orderSummary += `
+                    <div class="flex justify-between items-center py-2 border-b">
+                        <div>
+                            <p class="font-medium">${item.name}</p>
+                            <p class="text-sm text-gray-600">${item.price.toLocaleString('vi-VN')}đ x ${item.quantity}</p>
+                        </div>
+                        <p class="font-semibold">${(item.price * item.quantity).toLocaleString('vi-VN')}đ</p>
+                    </div>
+                `;
+            });
+            
+            cartItems.innerHTML = `
+                <div class="text-center py-8">
+                    <i class="fas fa-check-circle text-6xl text-green-500 mb-4"></i>
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">Cảm ơn bạn đã đặt hàng!</h4>
+                    <p class="text-gray-600 mb-4">Đơn hàng của bạn đã được xác nhận.</p>
+                    <div class="bg-gray-50 p-4 rounded-lg mb-4 text-left">
+                        <h5 class="font-semibold mb-3">Chi tiết đơn hàng:</h5>
+                        ${orderSummary}
+                        ${promoInfo}
+                        <div class="flex justify-between items-center pt-3 border-t font-bold text-lg">
+                            <span>Tổng tiền:</span>
+                            <span class="text-amber-800">${finalTotal.toLocaleString('vi-VN')}đ</span>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-2">Chúng tôi sẽ liên hệ với bạn sớm nhất để xác nhận đơn hàng.</p>
+                    </div>
+                    <button onclick="completeCheckout()" class="bg-amber-800 text-white px-6 py-2 rounded-lg hover:bg-amber-900 transition-colors">
+                        Hoàn Tất
+                    </button>
+                </div>
+            `;
+            
+            document.getElementById('cart-total').innerHTML = '';
+            document.getElementById('cart-actions').innerHTML = '';
+        }
+
+        function completeCheckout() {
+            // Remove selected items from cart
+            const selectedItems = cart.filter(item => item.selected);
+            cart = cart.filter(item => !item.selected);
+            
+            // Update cart count
+            cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+            
+            // Reset promo if cart is empty or validate if items remain
+            if (cart.length === 0) {
+                appliedPromo = null;
+                promoDiscount = 0;
+            } else {
+                validatePromoCode();
+            }
+            
+            updateCartButton();
+            closeCart();
+            
+            // Show success notification
+            showNotification(`Đã thanh toán thành công ${selectedItems.length} sản phẩm!`, 'success');
+        }
+
+        function checkout() {
+            // Legacy function - redirect to new checkout
+            checkoutSelected();
+        }
+
+        // Newsletter subscription
+        function subscribeNewsletter(event) {
+            event.preventDefault();
+            const email = document.getElementById('newsletter-email').value;
+            
+            // Show success message
+            const form = event.target;
+            form.innerHTML = `
+                <div class="text-center">
+                    <i class="fas fa-check-circle text-green-500 text-3xl mb-4"></i>
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">Cảm Ơn Bạn!</h4>
+                    <p class="text-gray-600">Bạn đã đăng ký nhận bản tin thành công.</p>
+                </div>
+            `;
+        }
+
+        // Modal functionality
+        function showModal(type) {
+            const modal = document.getElementById('modal');
+            const title = document.getElementById('modal-title');
+            const content = document.getElementById('modal-content');
+            
+            const modalContent = {
+                shipping: {
+                    title: 'Thông Tin Vận Chuyển',
+                    content: `
+                        <h4 class="font-semibold mb-2">Các Tùy Chọn Vận Chuyển:</h4>
+                        <ul class="list-disc list-inside space-y-1 mb-4">
+                            <li>Vận chuyển tiêu chuẩn (5-7 ngày làm việc): Miễn phí cho đơn hàng trên 1.200.000đ</li>
+                            <li>Vận chuyển nhanh (2-3 ngày làm việc): 50.000đ</li>
+                            <li>Vận chuyển hỏa tốc (1 ngày làm việc): 100.000đ</li>
+                        </ul>
+                        <p>Chúng tôi giao hàng toàn quốc và quốc tế. Tất cả đơn hàng được xử lý trong vòng 24 giờ.</p>
+                    `
+                },
+                returns: {
+                    title: 'Đổi Trả & Hoàn Tiền',
+                    content: `
+                        <p class="mb-4">Chúng tôi muốn bạn hoàn toàn hài lòng với sản phẩm đã mua.</p>
+                        <h4 class="font-semibold mb-2">Chính Sách Đổi Trả:</h4>
+                        <ul class="list-disc list-inside space-y-1">
+                            <li>Thời hạn đổi trả 30 ngày kể từ ngày giao hàng</li>
+                            <li>Sản phẩm phải còn nguyên seal và bao bì gốc</li>
+                            <li>Miễn phí vận chuyển đổi trả cho sản phẩm lỗi</li>
+                            <li>Hoàn tiền được xử lý trong vòng 5-7 ngày làm việc</li>
+                        </ul>
+                    `
+                },
+                faq: {
+                    title: 'Câu Hỏi Thường Gặp',
+                    content: `
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-semibold">Làm thế nào để bảo quản cà phê?</h4>
+                                <p>Bảo quản ở nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp. Sử dụng hộp kín để giữ hương vị.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Cà phê có thể giữ tươi trong bao lâu?</h4>
+                                <p>Cà phê của chúng tôi ngon nhất khi sử dụng trong vòng 2-4 tuần kể từ ngày rang để có hương vị tối ưu.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Có bán sỉ không?</h4>
+                                <p>Có! Liên hệ với chúng tôi để biết thông tin về đơn hàng số lượng lớn và giá sỉ.</p>
+                            </div>
+                        </div>
+                    `
+                },
+                contact: {
+                    title: 'Liên Hệ Hỗ Trợ',
+                    content: `
+                        <p class="mb-4">Cần hỗ trợ? Chúng tôi luôn sẵn sàng giúp bạn!</p>
+                        <div class="space-y-2">
+                            <p><strong>Email:</strong> support@caphesaigon.vn</p>
+                            <p><strong>Điện thoại:</strong> +84 (0) 123 456 789</p>
+                            <p><strong>Chat trực tuyến:</strong> 9:00 - 18:00 (GMT+7)</p>
+                            <p><strong>Thời gian phản hồi:</strong> Trong vòng 24 giờ</p>
+                        </div>
+                    `
+                },
+                brewing: {
+                    title: 'Hướng Dẫn Pha Chế',
+                    content: `
+                        <h4 class="font-semibold mb-2">Cà Phê Phin Việt Nam:</h4>
+                        <ol class="list-decimal list-inside space-y-1 mb-4">
+                            <li>Sử dụng 2-3 thìa cà phê xay thô</li>
+                            <li>Đặt phin lên cốc, cho cà phê vào và ép nhẹ</li>
+                            <li>Rót ít nước nóng (90-95°C), đợi 30 giây</li>
+                            <li>Rót đầy nước và để nhỏ giọt (3-5 phút)</li>
+                            <li>Thêm sữa đặc nếu muốn</li>
+                        </ol>
+                        <p><strong>Mẹo:</strong> Nhỏ giọt càng chậm, cà phê càng đậm đà!</p>
+                    `
+                },
+                privacy: {
+                    title: 'Chính Sách Bảo Mật',
+                    content: `
+                        <p class="mb-4">Quyền riêng tư của bạn rất quan trọng với chúng tôi. Chính sách này giải thích cách chúng tôi thu thập và sử dụng thông tin của bạn.</p>
+                        <h4 class="font-semibold mb-2">Thông Tin Chúng Tôi Thu Thập:</h4>
+                        <ul class="list-disc list-inside space-y-1 mb-4">
+                            <li>Thông tin liên hệ (tên, email, số điện thoại)</li>
+                            <li>Địa chỉ giao hàng và thanh toán</li>
+                            <li>Lịch sử đơn hàng và sở thích</li>
+                        </ul>
+                        <p>Chúng tôi không bao giờ bán thông tin cá nhân của bạn cho bên thứ ba.</p>
+                    `
+                },
+                terms: {
+                    title: 'Điều Khoản Dịch Vụ',
+                    content: `
+                        <p class="mb-4">Bằng cách sử dụng website và dịch vụ của chúng tôi, bạn đồng ý với các điều khoản này.</p>
+                        <h4 class="font-semibold mb-2">Điều Khoản Chính:</h4>
+                        <ul class="list-disc list-inside space-y-1">
+                            <li>Tất cả giá cả tính bằng VNĐ và có thể thay đổi</li>
+                            <li>Đơn hàng tùy thuộc vào tình trạng còn hàng</li>
+                            <li>Chúng tôi có quyền từ chối phục vụ</li>
+                            <li>Các điều khoản này được điều chỉnh bởi luật pháp Việt Nam</li>
+                        </ul>
+                    `
+                },
+                refund: {
+                    title: 'Chính Sách Hoàn Tiền & Đổi Trả & Đổi Trả',
+                    content: `
+                        <h4 class="font-semibold mb-2">Điều Kiện Hoàn Tiền:</h4>
+                        <ul class="list-disc list-inside space-y-1 mb-4">
+                            <li>Sản phẩm phải được trả lại trong vòng 30 ngày</li>
+                            <li>Sản phẩm phải còn nguyên seal và chưa sử dụng</li>
+                            <li>Yêu cầu bao bì gốc</li>
+                            <li>Phí vận chuyển không được hoàn lại</li>
+                        </ul>
+                        <p>Hoàn tiền được xử lý về phương thức thanh toán gốc trong vòng 5-7 ngày làm việc.</p>
+                    `
+                }
+            };
+            
+            if (modalContent[type]) {
+                title.textContent = modalContent[type].title;
+                content.innerHTML = modalContent[type].content;
+                modal.classList.remove('hidden');
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.add('hidden');
+        }
+
+        // Smooth scrolling
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                
+                // Close mobile menu if open
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Fade in animation on scroll
+        function handleScrollAnimation() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Close cart modal when clicking outside
+        document.getElementById('cart-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeCart();
+            }
+        });
+
+        // Promo code functionality
+        const promoCodes = {
+            'FLASH40': { discount: 0.4, minOrder: 1500000, type: 'percentage', description: 'Giảm 40% cho đơn từ 1.500.000đ' },
+            'BUY2GET1': { discount: 0.33, minOrder: 0, type: 'percentage', description: 'Mua 2 tặng 1 (giảm 33%)' },
+            'FREESHIP': { discount: 50000, minOrder: 800000, type: 'fixed', description: 'Miễn phí vận chuyển cho đơn từ 800.000đ' },
+            'NEWCUSTOMER25': { discount: 0.25, minOrder: 0, type: 'percentage', description: 'Giảm 25% cho khách hàng mới' },
+            'COFFEE20': { discount: 0.2, minOrder: 1000000, type: 'percentage', description: 'Giảm 20% cho đơn từ 1.000.000đ' },
+            'WELCOME15': { discount: 0.15, minOrder: 0, type: 'percentage', description: 'Giảm 15% cho khách hàng mới' },
+            'BUNDLE30': { discount: 0.3, minOrder: 0, type: 'percentage', description: 'Giảm 30% khi mua 3 sản phẩm trở lên' }
+        };
+
+        function applyPromo(promoCode) {
+            const promo = promoCodes[promoCode];
+            if (!promo) {
+                showNotification('Mã khuyến mãi không hợp lệ!', 'error');
+                return;
+            }
+
+            const cartTotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            
+            // Check minimum order requirement
+            if (cartTotal < promo.minOrder) {
+                showNotification(`Đơn hàng tối thiểu ${promo.minOrder.toLocaleString('vi-VN')}đ để áp dụng mã này!`, 'error');
+                return;
+            }
+
+            // Check bundle requirement for BUNDLE30
+            if (promoCode === 'BUNDLE30' && cart.length < 3) {
+                showNotification('Cần mua ít nhất 3 sản phẩm để áp dụng mã này!', 'error');
+                return;
+            }
+
+            appliedPromo = promoCode;
+            if (promo.type === 'percentage') {
+                promoDiscount = cartTotal * promo.discount;
+            } else {
+                promoDiscount = promo.discount;
+            }
+
+            showNotification(`Đã áp dụng mã ${promoCode}! Tiết kiệm ${promoDiscount.toLocaleString('vi-VN')}đ`, 'success');
+            
+            // If cart is open, refresh it
+            const cartModal = document.getElementById('cart-modal');
+            if (!cartModal.classList.contains('hidden')) {
+                showCart();
+            }
+        }
+
+        function showNotification(message, type = 'success') {
+            const notification = document.getElementById('cart-notification');
+            const messageEl = document.getElementById('cart-message');
+            
+            messageEl.textContent = message;
+            
+            // Change color based on type
+            if (type === 'error') {
+                notification.className = notification.className.replace('bg-emerald-500', 'bg-red-500');
+            } else {
+                notification.className = notification.className.replace('bg-red-500', 'bg-emerald-500');
+            }
+            
+            notification.classList.remove('hidden');
+            notification.classList.remove('translate-x-full');
+            setTimeout(() => {
+                notification.classList.add('translate-x-full');
+                setTimeout(() => {
+                    notification.classList.add('hidden');
+                }, 300);
+            }, 3000);
+        }
+
+        // Countdown timer for flash sale
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const endTime = now + (24 * 60 * 60 * 1000); // 24 hours from now
+            
+            const hoursEl = document.getElementById('hours');
+            const minutesEl = document.getElementById('minutes');
+            const secondsEl = document.getElementById('seconds');
+            
+            if (!hoursEl || !minutesEl || !secondsEl) return;
+            
+            function tick() {
+                const now = new Date().getTime();
+                const distance = endTime - now;
+                
+                if (distance < 0) {
+                    hoursEl.textContent = '00';
+                    minutesEl.textContent = '00';
+                    secondsEl.textContent = '00';
+                    return;
+                }
+                
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                hoursEl.textContent = hours.toString().padStart(2, '0');
+                minutesEl.textContent = minutes.toString().padStart(2, '0');
+                secondsEl.textContent = seconds.toString().padStart(2, '0');
+            }
+            
+            tick();
+            setInterval(tick, 1000);
+        }
+
+        // Initialize animations on page load
+        window.addEventListener('scroll', handleScrollAnimation);
+        window.addEventListener('load', function() {
+            handleScrollAnimation();
+            updateCountdown();
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'988ea5ac8081096a',t:'MTc1OTUxNzY1Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
