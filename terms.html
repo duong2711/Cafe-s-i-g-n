@@ -44,7 +44,7 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mb-12">
       <div class="terms-item bg-white rounded-xl p-6 shadow-sm border border-gray-200 text-center">
         <div class="w-14 h-14 sm:w-16 sm:h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-          <svg class="w-6 h-6 sm:w-8 sm:h-8 text-blue-600" viewBox="0 0 24 24" fill="currentColor" role="img" aria-label="Chấp nhận">
+          <svg class="w-6 h-6 sm:w-8 sm:h-8 text-blue-600" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M11,16.5L18,9.5L16.59,8.09L11,13.67L7.91,10.59L6.5,12L11,16.5Z"/>
           </svg>
         </div>
@@ -54,7 +54,7 @@
 
       <div class="terms-item bg-white rounded-xl p-6 shadow-sm border border-gray-200 text-center">
         <div class="w-14 h-14 sm:w-16 sm:h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-          <svg class="w-6 h-6 sm:w-8 sm:h-8 text-green-600" viewBox="0 0 24 24" fill="currentColor" role="img" aria-label="Bảo vệ">
+          <svg class="w-6 h-6 sm:w-8 sm:h-8 text-green-600" viewBox="0 0 24 24" fill="currentColor">
             <path d="M9,12L11,14L15,10L13.59,8.59L11,11.17L10.41,10.59L9,12M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z"/>
           </svg>
         </div>
@@ -64,7 +64,7 @@
 
       <div class="terms-item bg-white rounded-xl p-6 shadow-sm border border-gray-200 text-center">
         <div class="w-14 h-14 sm:w-16 sm:h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-          <svg class="w-6 h-6 sm:w-8 sm:h-8 text-purple-600" viewBox="0 0 24 24" fill="currentColor" role="img" aria-label="An toàn">
+          <svg class="w-6 h-6 sm:w-8 sm:h-8 text-purple-600" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11.5C15.4,11.5 16,12.4 16,13V16C16,16.6 15.6,17 15,17H9C8.4,17 8,16.6 8,16V13C8,12.4 8.4,11.5 9,11.5V10C9,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.2,8.7 10.2,10V11.5H13.8V10C13.8,8.7 12.8,8.2 12,8.2Z"/>
           </svg>
         </div>
@@ -73,8 +73,72 @@
       </div>
     </div>
 
-    <!-- Các section điều khoản (bạn giữ nguyên, chỉ cần thay font-size thành `text-base sm:text-lg md:text-xl`) -->
-    <!-- Mình không paste lại toàn bộ vì rất dài, nhưng bạn chỉ cần copy phần nội dung gốc và chỉnh class font như trên là đủ -->
+    <!-- Nghĩa Vụ Khách Hàng -->
+    <section class="mb-12">
+      <h3 class="text-2xl sm:text-3xl font-semibold text-amber-900 mb-4">Nghĩa Vụ Của Khách Hàng</h3>
+      <ul class="text-base sm:text-lg md:text-xl text-gray-700 space-y-2">
+        <li>• Cung cấp thông tin đầy đủ, chính xác</li>
+        <li>• Không lợi dụng dịch vụ cho mục đích vi phạm pháp luật</li>
+        <li>• Chịu trách nhiệm về tính xác thực của thông tin đã cung cấp</li>
+      </ul>
+    </section>
+
+    <!-- Điều khoản dịch vụ -->
+    <section class="mb-12">
+      <h3 class="text-2xl sm:text-3xl font-semibold text-amber-900 mb-4">Điều Khoản Dịch Vụ</h3>
+      <ul class="text-base sm:text-lg md:text-xl text-gray-700 space-y-2">
+        <li>• Chúng tôi có quyền thay đổi, tạm ngừng hoặc chấm dứt dịch vụ mà không cần báo trước trong một số trường hợp khẩn cấp.</li>
+        <li>• Giá cả sản phẩm có thể thay đổi tùy thời điểm, nhưng sẽ được thông báo rõ ràng trên website.</li>
+        <li>• Mọi hình thức gian lận hoặc lạm dụng dịch vụ sẽ bị xử lý theo quy định.</li>
+      </ul>
+    </section>
+
+    <!-- Thanh toán -->
+    <section class="mb-12">
+      <h3 class="text-2xl sm:text-3xl font-semibold text-amber-900 mb-4">Thanh Toán & Giao Hàng</h3>
+      <p class="text-base sm:text-lg md:text-xl text-gray-700 mb-2">
+        Cà Phê Sài Gòn hỗ trợ nhiều phương thức thanh toán: tiền mặt khi nhận hàng (COD), chuyển khoản ngân hàng, ví điện tử.
+      </p>
+      <p class="text-base sm:text-lg md:text-xl text-gray-700">
+        Thời gian giao hàng phụ thuộc vào địa chỉ và hình thức vận chuyển, thông thường từ 1–3 ngày làm việc tại nội thành.
+      </p>
+    </section>
+
+    <!-- Quyền sở hữu -->
+    <section class="mb-12">
+      <h3 class="text-2xl sm:text-3xl font-semibold text-amber-900 mb-4">Quyền Sở Hữu Trí Tuệ</h3>
+      <p class="text-base sm:text-lg md:text-xl text-gray-700">
+        Tất cả nội dung, logo, hình ảnh, thiết kế trên website đều thuộc quyền sở hữu của Cà Phê Sài Gòn. 
+        Nghiêm cấm sao chép, sử dụng trái phép dưới mọi hình thức.
+      </p>
+    </section>
+
+    <!-- Giới hạn trách nhiệm -->
+    <section class="mb-12">
+      <h3 class="text-2xl sm:text-3xl font-semibold text-amber-900 mb-4">Giới Hạn Trách Nhiệm</h3>
+      <p class="text-base sm:text-lg md:text-xl text-gray-700">
+        Chúng tôi không chịu trách nhiệm trong trường hợp sự cố ngoài tầm kiểm soát 
+        (thiên tai, dịch bệnh, lỗi mạng, hệ thống thanh toán bên thứ ba...).
+      </p>
+    </section>
+
+    <!-- Giải quyết tranh chấp -->
+    <section class="mb-12">
+      <h3 class="text-2xl sm:text-3xl font-semibold text-amber-900 mb-4">Giải Quyết Tranh Chấp</h3>
+      <p class="text-base sm:text-lg md:text-xl text-gray-700">
+        Tranh chấp phát sinh sẽ được giải quyết trên tinh thần thương lượng, 
+        trong trường hợp không đạt được thoả thuận, sẽ chuyển đến Toà án có thẩm quyền tại TP. Hồ Chí Minh.
+      </p>
+    </section>
+
+    <!-- Cập nhật -->
+    <section class="mb-12">
+      <h3 class="text-2xl sm:text-3xl font-semibold text-amber-900 mb-4">Cập Nhật Điều Khoản</h3>
+      <p class="text-base sm:text-lg md:text-xl text-gray-700">
+        Cà Phê Sài Gòn có thể thay đổi Điều Khoản Dịch Vụ bất kỳ lúc nào. 
+        Mọi chỉnh sửa sẽ được công bố công khai trên website.
+      </p>
+    </section>
 
     <!-- Home Button Section -->
     <div class="flex justify-center items-center gap-4 sm:gap-6 mt-12 mb-8">
