@@ -1,30 +1,24 @@
 <!DOCTYPE html>
-<!-- Header -->
-<header class="bg-gradient-to-r from-amber-800 to-amber-900 text-white py-4 md:py-6 shadow-lg sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto px-4 flex flex-wrap justify-between items-center">
-    <h1 class="text-2xl md:text-3xl font-bold mb-2 md:mb-0">Cà Phê Sài Gòn</h1>
-    <a href="index.html" class="bg-white/20 hover:bg-white/30 px-4 md:px-6 py-2 md:py-3 rounded-lg transition-colors duration-200 text-base md:text-lg font-medium flex items-center">
-      <svg class="mr-2 w-5 h-5 md:w-6 md:h-6 fill-current" viewBox="0 0 24 24">
-        <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
-      </svg>
-      Về Trang Chủ
-    </a>
-  </div>
-</header>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hướng Dẫn Pha Chế - Cà Phê Sài Gòn</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { box-sizing: border-box; }
+    .brew-card { transition: all 0.3s ease; }
+    .brew-card:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-amber-50 to-orange-100 text-gray-800 min-h-screen">
 
-
-<body class="bg-gray-50 text-gray-800">
-  <!-- HEADER -->
-  <header class="bg-gradient-to-r from-amber-800 to-amber-900 text-white py-6 shadow-lg sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
-      <h1 class="text-3xl font-bold flex items-center">
-        <svg class="mr-3 w-8 h-8 fill-current" viewBox="0 0 24 24">
-          <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11.5C15.4,11.5 16,12.4 16,13V16C16,17.4 15.4,18 14.8,18H9.2C8.6,18 8,17.4 8,16V13C8,12.4 8.6,11.5 9.2,11.5V10C9.2,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.5,8.7 10.5,10V11.5H13.5V10C13.5,8.7 12.8,8.2 12,8.2Z"/>
-        </svg>
-        Cà Phê Sài Gòn
-      </h1>
-      <a href="index.html" class="bg-white/20 hover:bg-white/30 px-6 py-3 rounded-lg transition-colors duration-200 text-lg font-medium flex items-center">
-        <svg class="mr-2 w-6 h-6 fill-current" viewBox="0 0 24 24">
+  <!-- Header Responsive Cũ -->
+  <header class="bg-gradient-to-r from-amber-800 to-amber-900 text-white py-4 md:py-6 shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 flex flex-wrap justify-between items-center">
+      <h1 class="text-2xl md:text-3xl font-bold mb-2 md:mb-0">Cà Phê Sài Gòn</h1>
+      <a href="index.html" class="bg-white/20 hover:bg-white/30 px-4 md:px-6 py-2 md:py-3 rounded-lg transition-colors duration-200 text-base md:text-lg font-medium flex items-center">
+        <svg class="mr-2 w-5 h-5 md:w-6 md:h-6 fill-current" viewBox="0 0 24 24">
           <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
         </svg>
         Về Trang Chủ
@@ -32,111 +26,93 @@
     </div>
   </header>
 
-  <!-- MAIN -->
-  <main class="max-w-5xl mx-auto px-4 py-12">
-    <h2 class="text-4xl font-bold text-amber-800 mb-10 text-center">Hướng Dẫn Pha Chế Cà Phê</h2>
-
-    <!-- GIỚI THIỆU -->
-    <div class="bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl p-8 mb-10">
-      <p class="text-xl text-gray-700 leading-relaxed text-center">
-        Pha chế cà phê là một nghệ thuật cần sự tinh tế, tỉ mỉ và đam mê. 
-        Dưới đây là các phương pháp pha chế phổ biến và chi tiết từng bước 
-        để bạn có thể tự tay tạo nên những tách cà phê chuẩn vị ngay tại nhà.
+  <!-- Main -->
+  <main class="max-w-5xl mx-auto px-4 py-10 md:py-16">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl md:text-6xl font-bold text-amber-800 mb-4">Hướng Dẫn Pha Chế Cà Phê</h2>
+      <p class="text-lg md:text-2xl text-gray-600 max-w-2xl mx-auto">
+        Khám phá nghệ thuật pha chế cà phê phin truyền thống Việt Nam với hương vị đậm đà và thơm ngon.
       </p>
     </div>
 
-    <!-- PHƯƠNG PHÁP PHIN -->
-    <div class="brew-card bg-white rounded-2xl p-8 shadow-md border border-gray-200 mb-8">
-      <h3 class="text-3xl font-bold text-amber-800 mb-4">1. Pha Cà Phê Phin Truyền Thống</h3>
-      <p class="text-lg text-gray-700 mb-4">
-        Phương pháp cổ điển, giữ trọn hương vị đậm đà, đắng nhẹ đặc trưng của cà phê Việt.
-      </p>
-      <ul class="list-disc list-inside space-y-2 text-lg text-gray-700">
-        <li>Nguyên liệu: 25g cà phê bột, 80ml nước sôi (95°C).</li>
-        <li>Đặt phin lên ly, cho cà phê vào, lắc nhẹ để bột đều.</li>
-        <li>Châm một ít nước sôi để ủ trong 30 giây.</li>
-        <li>Đổ tiếp phần nước còn lại, đậy nắp, chờ 5–7 phút.</li>
-        <li>Thưởng thức cà phê đen hoặc thêm sữa đặc để tạo cà phê sữa đá.</li>
+    <!-- Nguyên liệu -->
+    <section class="brew-card bg-white rounded-2xl p-6 md:p-10 mb-8 shadow">
+      <h3 class="text-2xl md:text-4xl font-bold text-amber-800 mb-6">Nguyên Liệu Chuẩn Bị</h3>
+      <ul class="list-disc list-inside text-base md:text-xl text-gray-700 space-y-2">
+        <li>25g cà phê bột rang xay vừa</li>
+        <li>100ml nước nóng khoảng 92°C</li>
+        <li>Sữa đặc (tùy khẩu vị)</li>
+        <li>Đường (tùy chọn)</li>
       </ul>
-    </div>
+    </section>
 
-    <!-- ESPRESSO -->
-    <div class="brew-card bg-white rounded-2xl p-8 shadow-md border border-gray-200 mb-8">
-      <h3 class="text-3xl font-bold text-amber-800 mb-4">2. Pha Cà Phê Espresso</h3>
-      <p class="text-lg text-gray-700 mb-4">
-        Espresso là nền tảng cho nhiều loại đồ uống cà phê Ý. Đậm đặc, thơm nồng và nhiều crema.
+    <!-- Bước 1 -->
+    <section class="brew-card bg-white rounded-2xl p-6 md:p-10 mb-8 shadow">
+      <h3 class="text-xl md:text-3xl font-bold text-gray-800 mb-3">Bước 1: Chuẩn Bị Phin & Nguyên Liệu</h3>
+      <p class="text-base md:text-xl text-gray-600 leading-relaxed">
+        Cho 25g cà phê vào phin, lắc nhẹ để bề mặt phẳng. Đặt phin lên ly thủy tinh sạch.
       </p>
-      <ul class="list-disc list-inside space-y-2 text-lg text-gray-700">
-        <li>Dùng máy Espresso chuyên dụng.</li>
-        <li>Nguyên liệu: 18–20g cà phê xay mịn.</li>
-        <li>Nén chặt bột, chiết xuất trong 25–30 giây với áp suất 9 bar.</li>
-        <li>Kết quả: 30ml espresso với lớp crema vàng óng.</li>
-      </ul>
-    </div>
+    </section>
 
-    <!-- POUR OVER -->
-    <div class="brew-card bg-white rounded-2xl p-8 shadow-md border border-gray-200 mb-8">
-      <h3 class="text-3xl font-bold text-amber-800 mb-4">3. Pha Cà Phê Pour Over (V60)</h3>
-      <p class="text-lg text-gray-700 mb-4">
-        Pour Over (V60) cho hương vị thanh, sáng và rõ nét, phù hợp với cà phê Arabica chất lượng cao.
+    <!-- Bước 2 -->
+    <section class="brew-card bg-white rounded-2xl p-6 md:p-10 mb-8 shadow">
+      <h3 class="text-xl md:text-3xl font-bold text-gray-800 mb-3">Bước 2: Ủ Cà Phê</h3>
+      <p class="text-base md:text-xl text-gray-600 leading-relaxed">
+        Rót 20ml nước nóng vào phin để cà phê nở đều. Đợi khoảng 30 giây để hương thơm được giải phóng.
       </p>
-      <ul class="list-disc list-inside space-y-2 text-lg text-gray-700">
-        <li>Nguyên liệu: 20g cà phê, 300ml nước sôi 92–94°C.</li>
-        <li>Dùng phễu V60 và giấy lọc.</li>
-        <li>Rót nước theo vòng tròn nhỏ, ủ 30 giây đầu tiên.</li>
-        <li>Tiếp tục rót từ từ theo nhiều đợt đến đủ lượng nước.</li>
-        <li>Tổng thời gian chiết xuất: 3–4 phút.</li>
-      </ul>
-    </div>
+    </section>
 
-    <!-- COLD BREW -->
-    <div class="brew-card bg-white rounded-2xl p-8 shadow-md border border-gray-200 mb-8">
-      <h3 class="text-3xl font-bold text-amber-800 mb-4">4. Pha Cà Phê Lạnh (Cold Brew)</h3>
-      <p class="text-lg text-gray-700 mb-4">
-        Cold Brew có vị ngọt dịu, ít đắng, ít chua và caffeine cao, phù hợp uống giải nhiệt.
+    <!-- Bước 3 -->
+    <section class="brew-card bg-white rounded-2xl p-6 md:p-10 mb-8 shadow">
+      <h3 class="text-xl md:text-3xl font-bold text-gray-800 mb-3">Bước 3: Rót Nước</h3>
+      <p class="text-base md:text-xl text-gray-600 leading-relaxed">
+        Thêm 80ml nước nóng còn lại, đậy nắp phin. Cà phê sẽ nhỏ giọt từ từ xuống ly. Thời gian chảy khoảng 5–7 phút là đạt.
       </p>
-      <ul class="list-disc list-inside space-y-2 text-lg text-gray-700">
-        <li>Nguyên liệu: 60g cà phê xay thô, 1 lít nước lạnh.</li>
-        <li>Ngâm cà phê trong bình thủy tinh, để tủ lạnh 12–18 tiếng.</li>
-        <li>Lọc bỏ bã, bảo quản lạnh trong 3–5 ngày.</li>
-        <li>Thưởng thức trực tiếp hoặc thêm sữa tươi, syrup.</li>
-      </ul>
-    </div>
+    </section>
 
-    <!-- CAPPUCCINO -->
-    <div class="brew-card bg-white rounded-2xl p-8 shadow-md border border-gray-200">
-      <h3 class="text-3xl font-bold text-amber-800 mb-4">5. Cappuccino / Latte</h3>
-      <p class="text-lg text-gray-700 mb-4">
-        Kết hợp espresso với sữa tươi đánh nóng, tạo nên thức uống béo ngậy, mềm mượt.
+    <!-- Bước 4 -->
+    <section class="brew-card bg-white rounded-2xl p-6 md:p-10 mb-8 shadow">
+      <h3 class="text-xl md:text-3xl font-bold text-gray-800 mb-3">Bước 4: Thưởng Thức</h3>
+      <p class="text-base md:text-xl text-gray-600 leading-relaxed">
+        Khi cà phê đã nhỏ giọt xong, bạn có thể thêm sữa đặc, đường hoặc đá tùy theo khẩu vị. 
+        Khuấy đều và thưởng thức hương vị cà phê phin truyền thống.
       </p>
-      <ul class="list-disc list-inside space-y-2 text-lg text-gray-700">
-        <li>Nguyên liệu: 1 shot espresso (30ml), 120ml sữa tươi.</li>
-        <li>Đánh sữa bằng vòi hơi đến khi có lớp foam mịn.</li>
-        <li>Rót sữa lên espresso, tạo latte art nếu thích.</li>
-        <li>Tỷ lệ cappuccino: 1/3 espresso – 1/3 sữa nóng – 1/3 foam.</li>
-        <li>Tỷ lệ latte: nhiều sữa hơn, foam mỏng hơn cappuccino.</li>
-      </ul>
-    </div>
+    </section>
 
-    <!-- BUTTONS -->
-    <div class="flex justify-center items-center gap-6 mt-12 mb-8">
-      <a href="index.html" class="bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white px-8 py-4 rounded-xl font-semibold text-xl transition-all duration-200 transform hover:scale-105 shadow-lg flex items-center">
-        <svg class="mr-3 w-8 h-8 fill-current" viewBox="0 0 24 24">
+    <!-- Tips -->
+    <section class="brew-card bg-gradient-to-r from-amber-100 to-orange-100 rounded-2xl p-6 md:p-10 mt-12 shadow">
+      <h3 class="text-2xl md:text-4xl font-bold text-amber-800 mb-6">Mẹo Pha Chế</h3>
+      <ul class="list-disc list-inside text-base md:text-xl text-gray-700 space-y-3">
+        <li>Nước quá nóng sẽ làm cà phê bị đắng, quá nguội sẽ làm mất hương vị.</li>
+        <li>Cà phê xay vừa sẽ giúp quá trình nhỏ giọt lý tưởng, không quá nhanh hay quá chậm.</li>
+        <li>Dùng ly thủy tinh dày để giữ nhiệt tốt hơn khi pha phin.</li>
+        <li>Nên chọn cà phê rang vừa để giữ được vị cân bằng giữa chua, đắng và hương thơm.</li>
+      </ul>
+    </section>
+
+    <!-- Buttons -->
+    <div class="flex flex-wrap justify-center items-center gap-6 mt-12 mb-8">
+      <a href="index.html" class="bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white px-6 md:px-8 py-3 md:py-4 rounded-xl font-semibold text-lg md:text-xl transition-all duration-200 transform hover:scale-105 shadow-lg flex items-center">
+        <svg class="mr-2 md:mr-3 w-6 h-6 md:w-8 md:h-8 fill-current" viewBox="0 0 24 24">
           <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
         </svg>
         Về Trang Chủ
       </a>
-      <button onclick="scrollToTop()" class="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white w-14 h-14 rounded-full shadow-lg transition-all duration-200 transform hover:scale-110 flex items-center justify-center">
-        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+      <button onclick="scrollToTop()" class="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white w-12 h-12 md:w-14 md:h-14 rounded-full shadow-lg transition-all duration-200 transform hover:scale-110 flex items-center justify-center">
+        <svg class="w-6 h-6 md:w-8 md:h-8 fill-current" viewBox="0 0 24 24">
           <path d="M12 4l-8 8h6v8h4v-8h6l-8-8z"/>
         </svg>
       </button>
     </div>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="bg-gray-900 text-white py-6 text-center text-gray-400 text-sm">
-    © 2024 Cà Phê Sài Gòn. Tất cả quyền được bảo lưu.
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-6 md:py-8 mt-16">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h3 class="text-base md:text-lg font-semibold mb-3 md:mb-4">Cà Phê Sài Gòn</h3>
+      <p class="text-gray-400 text-xs md:text-sm">© 2024 Cà Phê Sài Gòn. Tất cả quyền được bảo lưu.</p>
+      <p class="text-gray-500 text-xs mt-2">Hương vị truyền thống - Chất lượng hiện đại</p>
+    </div>
   </footer>
 
   <script>
