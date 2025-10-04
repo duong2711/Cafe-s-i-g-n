@@ -67,7 +67,14 @@
                         </button>
                     </div>
                 </div>
-                <div class="md:hidden">
+                <div class="md:hidden flex items-center space-x-4">
+                    <!-- Mobile cart button with badge -->
+                    <button onclick="showCart()" class="relative text-gray-700 hover:text-amber-800">
+                        <i class="fas fa-shopping-cart text-xl"></i>
+                        <span id="cart-badge-navbar" class="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-bold px-1.5 py-0.5 rounded-full hidden">0</span>
+                    </button>
+
+                    <!-- Hamburger menu -->
                     <button id="mobile-menu-btn" class="text-gray-700 hover:text-amber-800">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
@@ -82,6 +89,7 @@
                 <a href="#products" class="block text-gray-700 hover:text-amber-800 px-3 py-2 rounded-md text-base font-medium">Sản Phẩm</a>
                 <a href="#reviews" class="block text-gray-700 hover:text-amber-800 px-3 py-2 rounded-md text-base font-medium">Đánh Giá</a>
                 <a href="#contact" class="block text-gray-700 hover:text-amber-800 px-3 py-2 rounded-md text-base font-medium">Liên Hệ</a>
+
             </div>
         </div>
     </nav>
@@ -375,7 +383,7 @@
                             </svg>
                         </div>
                     </div>
-                    <div class="p-6">
+                    <div class="p-4 sm:p-6">
                         <h3 class="text-xl font-bold text-gray-800 mb-2">Cà Phê Cao Nguyên Đà Lạt</h3>
                         <p class="text-gray-600 mb-3">Cà phê đậm đà, thơm ngon với hương vị chocolate và caramel. Trồng trên cao nguyên mát mẻ Đà Lạt ở độ cao 1.500m.</p>
                         <div class="bg-amber-50 rounded-lg p-2 mb-4">
@@ -414,7 +422,7 @@
                             </svg>
                         </div>
                     </div>
-                    <div class="p-6">
+                    <div class="p-4 sm:p-6">
                         <h3 class="text-xl font-bold text-gray-800 mb-2">Cà Phê Robusta Buôn Ma Thuột</h3>
                         <p class="text-gray-600 mb-3">Đậm đà và mạnh mẽ với hương vị đất. Hạt robusta nổi tiếng từ thủ đô cà phê Buôn Ma Thuột.</p>
                         <div class="bg-green-50 rounded-lg p-2 mb-4">
@@ -453,7 +461,7 @@
                             </svg>
                         </div>
                     </div>
-                    <div class="p-6">
+                    <div class="p-4 sm:p-6">
                         <h3 class="text-xl font-bold text-gray-800 mb-2">Cà Phê Sài Gòn Buổi Sáng</h3>
                         <p class="text-gray-600 mb-3">Sự cân bằng hoàn hảo giữa arabica và robusta với hương vị vani và gia vị. Lấy cảm hứng từ những buổi sáng nhộn nhịp Sài Gòn.</p>
                         <div class="bg-purple-50 rounded-lg p-2 mb-4">
@@ -492,7 +500,7 @@
                             </svg>
                         </div>
                     </div>
-                    <div class="p-6">
+                    <div class="p-4 sm:p-6">
                         <h3 class="text-xl font-bold text-gray-800 mb-2">Cà Phê Arabica Cầu Đất Đặc Biệt</h3>
                         <p class="text-gray-600 mb-3">Arabica cao cấp nguồn gốc đơn với hương thơm hoa và vị chua sáng. Thu hoạch giới hạn từ cao nguyên Cầu Đất.</p>
                         <div class="bg-red-50 rounded-lg p-2 mb-4">
@@ -531,7 +539,7 @@
                             </svg>
                         </div>
                     </div>
-                    <div class="p-6">
+                    <div class="p-4 sm:p-6">
                         <h3 class="text-xl font-bold text-gray-800 mb-2">Cà Phê Chế Biến Mật Ong Đặc Biệt</h3>
                         <p class="text-gray-600 mb-3">Cà phê chế biến mật ong độc đáo với vị ngọt tự nhiên và hương trái cây. Món quà hiếm có dành cho những người sành cà phê.</p>
                         <div class="bg-yellow-50 rounded-lg p-2 mb-4">
@@ -570,7 +578,7 @@
                             </svg>
                         </div>
                     </div>
-                    <div class="p-6">
+                    <div class="p-4 sm:p-6">
                         <h3 class="text-xl font-bold text-gray-800 mb-2">Cà Phê Không Caffeine Swiss Water</h3>
                         <p class="text-gray-600 mb-3">Hương vị đầy đủ mà không có caffeine. Chế biến bằng phương pháp Swiss Water để giữ nguyên hương vị đậm đà của blend đặc trưng.</p>
                         <div class="bg-indigo-50 rounded-lg p-2 mb-4">
@@ -911,8 +919,8 @@
 
     <!-- Modal -->
     <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
-        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-96 overflow-y-auto">
-            <div class="p-6">
+        <div class="bg-white rounded-2xl w-full max-w-lg sm:max-w-xl md:max-w-2xl max-h-[80vh] overflow-y-auto">
+            <div class="p-4 sm:p-6">
                 <div class="flex justify-between items-center mb-4">
                     <h3 id="modal-title" class="text-2xl font-bold text-gray-800"></h3>
                     <button onclick="closeModal()" class="text-gray-500 hover:text-gray-700">
@@ -926,8 +934,8 @@
 
     <!-- Cart Modal -->
     <div id="cart-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
-        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-96 overflow-y-auto">
-            <div class="p-6">
+        <div class="bg-white rounded-2xl w-full max-w-lg sm:max-w-xl md:max-w-2xl max-h-[80vh] overflow-y-auto">
+            <div class="p-4 sm:p-6">
                 <div class="flex justify-between items-center mb-4">
                     <h3 class="text-2xl font-bold text-gray-800">
                         <i class="fas fa-shopping-cart mr-2 text-amber-800"></i>Giỏ Hàng Của Bạn
@@ -942,7 +950,7 @@
                 <div id="cart-total" class="border-t pt-4 mb-4">
                     <!-- Total will be inserted here -->
                 </div>
-                <div id="cart-actions" class="flex gap-4">
+                <div id="cart-actions" class="flex flex-col sm:flex-row gap-4">
                     <!-- Action buttons will be inserted here -->
                 </div>
             </div>
@@ -950,7 +958,7 @@
     </div>
 
     <!-- Cart Notification -->
-    <div id="cart-notification" class="fixed top-20 right-4 bg-emerald-500 text-white px-6 py-3 rounded-lg shadow-lg transform translate-x-full transition-transform duration-300 z-50 hidden">
+    <div id="cart-notification" class="fixed top-20 right-4 sm:right-4 left-4 sm:left-auto bg-emerald-500 text-white px-6 py-3 rounded-lg shadow-lg transform translate-x-full transition-transform duration-300 z-50 hidden">
         <div class="flex items-center">
             <i class="fas fa-check-circle mr-2"></i>
             <span id="cart-message">Đã thêm vào giỏ hàng!</span>
@@ -998,11 +1006,21 @@
         }
 
         function updateCartButton() {
-            const cartBtn = document.getElementById('cart-button');
-            if (cartBtn) {
-                cartBtn.innerHTML = `<i class="fas fa-shopping-cart mr-2"></i>Giỏ Hàng (${cartCount})`;
-                // Always show the cart button
-                cartBtn.classList.remove('hidden');
+            const cartBtnDesktop = document.getElementById('cart-button');
+            const cartBadgeNavbar = document.getElementById('cart-badge-navbar');
+
+            if (cartBtnDesktop) {
+                cartBtnDesktop.innerHTML = `<i class="fas fa-shopping-cart mr-2"></i>Giỏ Hàng (${cartCount})`;
+                cartBtnDesktop.classList.remove('hidden');
+            }
+
+            if (cartBadgeNavbar) {
+                if (cartCount > 0) {
+                    cartBadgeNavbar.textContent = cartCount;
+                    cartBadgeNavbar.classList.remove('hidden');
+                } else {
+                    cartBadgeNavbar.classList.add('hidden');
+                }
             }
         }
 
