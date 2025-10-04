@@ -9,149 +9,177 @@
     body {
       box-sizing: border-box;
     }
+    
     .policy-item {
       transition: all 0.3s ease;
     }
+    
     .policy-item:hover {
       transform: translateY(-2px);
       box-shadow: 0 8px 25px rgba(0,0,0,0.1);
     }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-800 min-h-screen">
-  <!-- Header -->
-  <header class="bg-gradient-to-r from-amber-800 to-amber-900 text-white shadow-lg sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center py-4">
-      <!-- Logo -->
-      <h1 class="text-2xl sm:text-3xl font-bold">Cà Phê Sài Gòn</h1>
-      <!-- Nút menu mobile -->
-      <button class="md:hidden block focus:outline-none" onclick="toggleMenu()">
-        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
-          <path d="M4 6h16M4 12h16M4 18h16"/>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-gradient-to-r from-amber-800 to-amber-900 text-white py-6 shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+      <h1 class="text-3xl font-bold flex items-center">
+        <svg class="mr-3 w-8 h-8 fill-current" viewBox="0 0 24 24">
+          <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11.5C15.4,11.5 16,12.4 16,13V16C16,17.4 15.4,18 14.8,18H9.2C8.6,18 8,17.4 8,16V13C8,12.4 8.6,11.5 9.2,11.5V10C9.2,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.5,8.7 10.5,10V11.5H13.5V10C13.5,8.7 12.8,8.2 12,8.2Z"/>
         </svg>
-      </button>
-      <!-- Menu desktop -->
-      <nav class="hidden md:flex items-center space-x-6">
-        <a href="index.html" class="hover:text-amber-300">Trang Chủ</a>
-        <a href="shipping.html" class="hover:text-amber-300">Giao Hàng</a>
-        <a href="faq.html" class="hover:text-amber-300">FAQ</a>
-        <a href="contact.html" class="hover:text-amber-300">Liên Hệ</a>
-      </nav>
-    </div>
-    <!-- Menu mobile dropdown -->
-    <div id="mobileMenu" class="hidden flex-col bg-amber-900 md:hidden">
-      <a href="index.html" class="px-4 py-3 border-t border-amber-700 hover:bg-amber-800">Trang Chủ</a>
-      <a href="shipping.html" class="px-4 py-3 border-t border-amber-700 hover:bg-amber-800">Giao Hàng</a>
-      <a href="faq.html" class="px-4 py-3 border-t border-amber-700 hover:bg-amber-800">FAQ</a>
-      <a href="contact.html" class="px-4 py-3 border-t border-amber-700 hover:bg-amber-800">Liên Hệ</a>
+        Cà Phê Sài Gòn
+      </h1>
+      <a href="index.html" class="bg-white/20 hover:bg-white/30 px-6 py-3 rounded-lg transition-colors duration-200 text-lg font-medium flex items-center">
+        <svg class="mr-2 w-6 h-6 fill-current" viewBox="0 0 24 24">
+          <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
+        </svg>
+        Về Trang Chủ
+      </a>
     </div>
   </header>
 
-  <!-- Main -->
-  <main class="max-w-4xl mx-auto px-4 py-10 md:py-14">
-    <h2 class="text-4xl md:text-5xl font-bold text-amber-800 mb-8 text-center">Chính Sách Bảo Mật</h2>
+  <main class="max-w-4xl mx-auto px-4 py-12">
+    <h2 class="text-4xl font-bold text-amber-800 mb-8 text-center">Chính Sách Bảo Mật</h2>
     
-    <div class="bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl p-6 md:p-8 mb-10">
-      <p class="text-lg md:text-xl text-gray-700 text-center leading-relaxed">
+    <div class="bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl p-8 mb-8">
+      <p class="text-xl text-gray-700 text-center leading-relaxed">
         Chúng tôi cam kết bảo vệ thông tin cá nhân của khách hàng một cách tuyệt đối và minh bạch. 
         Dưới đây là các chính sách bảo mật mà chúng tôi áp dụng.
       </p>
     </div>
     
-    <!-- Policy Items -->
     <div class="space-y-6">
-      <div class="policy-item bg-white rounded-xl p-6 md:p-8 shadow-sm border border-gray-200">
-        <h3 class="text-2xl font-bold text-amber-800 mb-3">Bảo Vệ Dữ Liệu Khách Hàng</h3>
-        <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
-          Chúng tôi cam kết không chia sẻ dữ liệu cá nhân của khách hàng với bất kỳ bên thứ ba nào 
-          mà không có sự đồng ý rõ ràng từ khách hàng.
-        </p>
+      <div class="policy-item bg-white rounded-xl p-8 shadow-sm border border-gray-200">
+        <div class="flex items-start">
+          <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-6 flex-shrink-0">
+            <svg class="w-6 h-6 text-green-600" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9L10,17Z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-amber-800 mb-3">Bảo Vệ Dữ Liệu Khách Hàng</h3>
+            <p class="text-xl text-gray-700 leading-relaxed">
+              Chúng tôi cam kết không chia sẻ dữ liệu cá nhân của khách hàng với bất kỳ bên thứ ba nào 
+              mà không có sự đồng ý rõ ràng từ khách hàng.
+            </p>
+          </div>
+        </div>
       </div>
 
-      <div class="policy-item bg-white rounded-xl p-6 md:p-8 shadow-sm border border-gray-200">
-        <h3 class="text-2xl font-bold text-amber-800 mb-3">Bảo Mật Thanh Toán</h3>
-        <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
-          Tất cả thông tin thanh toán của khách hàng được mã hóa bằng công nghệ SSL 256-bit 
-          và tuân thủ các tiêu chuẩn bảo mật quốc tế PCI DSS.
-        </p>
+      <div class="policy-item bg-white rounded-xl p-8 shadow-sm border border-gray-200">
+        <div class="flex items-start">
+          <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-6 flex-shrink-0">
+            <svg class="w-6 h-6 text-blue-600" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12,17A2,2 0 0,0 14,15C14,13.89 13.1,13 12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V10C4,8.89 4.9,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-amber-800 mb-3">Bảo Mật Thanh Toán</h3>
+            <p class="text-xl text-gray-700 leading-relaxed">
+              Tất cả thông tin thanh toán của khách hàng được mã hóa bằng công nghệ SSL 256-bit 
+              và tuân thủ các tiêu chuẩn bảo mật quốc tế PCI DSS.
+            </p>
+          </div>
+        </div>
       </div>
 
-      <div class="policy-item bg-white rounded-xl p-6 md:p-8 shadow-sm border border-gray-200">
-        <h3 class="text-2xl font-bold text-amber-800 mb-3">Quyền Kiểm Soát Dữ Liệu</h3>
-        <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
-          Khách hàng có toàn quyền yêu cầu xem, chỉnh sửa hoặc xóa thông tin cá nhân 
-          bất cứ lúc nào bằng cách liên hệ với bộ phận hỗ trợ khách hàng.
-        </p>
+      <div class="policy-item bg-white rounded-xl p-8 shadow-sm border border-gray-200">
+        <div class="flex items-start">
+          <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-6 flex-shrink-0">
+            <svg class="w-6 h-6 text-purple-600" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6M12,8A4,4 0 0,0 8,12A4,4 0 0,0 12,16A4,4 0 0,0 16,12A4,4 0 0,0 12,8Z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-amber-800 mb-3">Quyền Kiểm Soát Dữ Liệu</h3>
+            <p class="text-xl text-gray-700 leading-relaxed">
+              Khách hàng có toàn quyền yêu cầu xem, chỉnh sửa hoặc xóa thông tin cá nhân 
+              bất cứ lúc nào bằng cách liên hệ với bộ phận hỗ trợ khách hàng.
+            </p>
+          </div>
+        </div>
       </div>
 
-      <div class="policy-item bg-white rounded-xl p-6 md:p-8 shadow-sm border border-gray-200">
-        <h3 class="text-2xl font-bold text-amber-800 mb-3">Thu Thập Thông Tin Minh Bạch</h3>
-        <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
-          Chúng tôi chỉ thu thập những thông tin cần thiết để cung cấp dịch vụ tốt nhất 
-          và luôn thông báo rõ ràng mục đích sử dụng thông tin.
-        </p>
+      <div class="policy-item bg-white rounded-xl p-8 shadow-sm border border-gray-200">
+        <div class="flex items-start">
+          <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mr-6 flex-shrink-0">
+            <svg class="w-6 h-6 text-orange-600" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12,2A3,3 0 0,1 15,5V11A3,3 0 0,1 12,14A3,3 0 0,1 9,11V5A3,3 0 0,1 12,2M19,11C19,14.53 16.39,17.44 13,17.93V21H11V17.93C7.61,17.44 5,14.53 5,11H7A5,5 0 0,0 12,16A5,5 0 0,0 17,11H19Z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-amber-800 mb-3">Thu Thập Thông Tin Minh Bạch</h3>
+            <p class="text-xl text-gray-700 leading-relaxed">
+              Chúng tôi chỉ thu thập những thông tin cần thiết để cung cấp dịch vụ tốt nhất 
+              và luôn thông báo rõ ràng mục đích sử dụng thông tin.
+            </p>
+          </div>
+        </div>
       </div>
 
-      <div class="policy-item bg-white rounded-xl p-6 md:p-8 shadow-sm border border-gray-200">
-        <h3 class="text-2xl font-bold text-amber-800 mb-3">Bảo Mật Hệ Thống</h3>
-        <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
-          Hệ thống của chúng tôi được bảo vệ bằng tường lửa, giám sát 24/7 
-          và cập nhật bảo mật thường xuyên để đảm bảo an toàn tuyệt đối.
-        </p>
+      <div class="policy-item bg-white rounded-xl p-8 shadow-sm border border-gray-200">
+        <div class="flex items-start">
+          <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-6 flex-shrink-0">
+            <svg class="w-6 h-6 text-red-600" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M21,11C21,16.55 17.16,21.74 12,23C6.84,21.74 3,16.55 3,11V5L12,1L21,5V11M12,7C10.59,7 9.41,7.59 8.6,8.6L7.18,7.18C8.37,5.96 10.1,5.15 12,5.15C13.9,5.15 15.63,5.96 16.82,7.18L15.4,8.6C14.59,7.59 13.41,7 12,7Z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-amber-800 mb-3">Bảo Mật Hệ Thống</h3>
+            <p class="text-xl text-gray-700 leading-relaxed">
+              Hệ thống của chúng tôi được bảo vệ bằng tường lửa, giám sát 24/7 
+              và cập nhật bảo mật thường xuyên để đảm bảo an toàn tuyệt đối.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
 
     <!-- Contact Section -->
-    <div class="bg-gradient-to-r from-amber-100 to-orange-100 rounded-2xl p-6 md:p-8 mt-12">
+    <div class="bg-gradient-to-r from-amber-100 to-orange-100 rounded-2xl p-8 mt-12">
       <h3 class="text-3xl font-bold text-amber-800 mb-6 text-center">Liên Hệ Về Bảo Mật</h3>
-      <p class="text-lg md:text-xl text-gray-700 text-center mb-6">
+      <p class="text-xl text-gray-700 text-center mb-6">
         Nếu bạn có bất kỳ câu hỏi nào về chính sách bảo mật, vui lòng liên hệ:
       </p>
       <div class="flex justify-center gap-8 flex-wrap">
         <div class="text-center">
           <p class="font-bold text-lg text-amber-800">Hotline</p>
-          <p class="text-lg md:text-xl text-gray-700">0988 007 527</p>
+          <p class="text-xl text-gray-700">0988 007 527</p>
         </div>
         <div class="text-center">
           <p class="font-bold text-lg text-amber-800">Email</p>
-          <p class="text-lg md:text-xl text-gray-700">BABAIU23341@student.hcmiu.edu.vn</p>
+          <p class="text-xl text-gray-700">BABAIU23341@student.hcmiu.edu.vn</p>
         </div>
       </div>
     </div>
 
-    <!-- Buttons -->
+    <!-- Home Button Section -->
     <div class="flex justify-center items-center gap-6 mt-12 mb-8">
-      <a href="index.html" class="bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white px-6 md:px-8 py-3 md:py-4 rounded-xl font-semibold text-lg md:text-xl transition-all duration-200 transform hover:scale-105 shadow-lg flex items-center">
-        <svg class="mr-2 md:mr-3 w-6 h-6 md:w-8 md:h-8 fill-current" viewBox="0 0 24 24">
+      <a href="index.html" class="bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white px-8 py-4 rounded-xl font-semibold text-xl transition-all duration-200 transform hover:scale-105 shadow-lg flex items-center">
+        <svg class="mr-3 w-8 h-8 fill-current" viewBox="0 0 24 24">
           <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
         </svg>
         Về Trang Chủ
       </a>
-      <button onclick="scrollToTop()" class="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white w-12 h-12 md:w-14 md:h-14 rounded-full shadow-lg transition-all duration-200 transform hover:scale-110 flex items-center justify-center">
-        <svg class="w-6 h-6 md:w-8 md:h-8 fill-current" viewBox="0 0 24 24">
+      <button onclick="scrollToTop()" class="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white w-14 h-14 rounded-full shadow-lg transition-all duration-200 transform hover:scale-110 flex items-center justify-center">
+        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
           <path d="M12 4l-8 8h6v8h4v-8h6l-8-8z"/>
         </svg>
       </button>
     </div>
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-6 md:py-8 mt-16">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <h3 class="text-base md:text-lg font-semibold mb-3 md:mb-4">Cà Phê Sài Gòn</h3>
-      <p class="text-gray-400 text-xs md:text-sm">© 2024 Cà Phê Sài Gòn. Tất cả quyền được bảo lưu.</p>
-      <p class="text-gray-500 text-xs mt-2">Hương vị truyền thống - Chất lượng hiện đại</p>
-    </div>
+  <footer class="bg-gray-900 text-white py-6 text-center text-gray-400 text-sm">
+    © 2024 Cà Phê Sài Gòn. Tất cả quyền được bảo lưu.
   </footer>
 
   <script>
-    function toggleMenu() {
-      const menu = document.getElementById("mobileMenu");
-      menu.classList.toggle("hidden");
-    }
     function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     }
   </script>
-</body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98943a506790509a',t:'MTc1OTU3NjE3NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
