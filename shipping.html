@@ -3,22 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Liên Hệ Hỗ Trợ - Cà Phê Sài Gòn</title>
+  <title>Chính Sách Giao Hàng - Cà Phê Sài Gòn</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
       box-sizing: border-box;
     }
-    .contact-card {
-      transition: all 0.3s ease;
-    }
-    .contact-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-    }
   </style>
 </head>
-<body class="bg-gradient-to-br from-amber-50 to-orange-100 text-gray-800 min-h-screen">
+<body class="bg-gradient-to-br from-orange-50 to-amber-100 text-gray-800 min-h-screen">
   <!-- Header -->
   <header class="bg-gradient-to-r from-amber-800 to-amber-900 text-white py-6 shadow-lg sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
@@ -32,68 +25,45 @@
     </div>
   </header>
 
-  <main class="max-w-6xl mx-auto px-4 py-12">
+  <main class="max-w-5xl mx-auto px-4 py-12">
     <!-- Tiêu đề -->
     <div class="text-center mb-12">
-      <h2 class="text-6xl font-bold text-amber-800 mb-4">Liên Hệ Hỗ Trợ</h2>
-      <p class="text-2xl text-gray-600 max-w-3xl mx-auto">
-        Chúng tôi luôn sẵn sàng hỗ trợ bạn 24/7. Hãy liên hệ với chúng tôi qua các kênh dưới đây.
+      <h2 class="text-5xl font-bold text-amber-800 mb-4">Chính Sách Giao Hàng</h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Cà Phê Sài Gòn cam kết giao hàng nhanh chóng, an toàn và đúng hẹn để mang đến trải nghiệm tốt nhất cho khách hàng.
       </p>
     </div>
 
-    <!-- Thẻ liên hệ -->
-    <div class="grid md:grid-cols-3 gap-8 mb-12">
-      <!-- Hotline -->
-      <div class="contact-card bg-white rounded-2xl shadow-lg p-8 text-center">
-        <h3 class="text-2xl font-bold text-gray-800 mb-3">Hotline 24/7</h3>
-        <p class="text-4xl font-bold text-green-600 mb-4">0988 007 527</p>
-        <a href="tel:0988007527" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center">
-          Gọi Ngay
-        </a>
-      </div>
+    <!-- Nội dung -->
+    <div class="bg-white rounded-2xl shadow-lg p-8 space-y-8">
+      <section>
+        <h3 class="text-2xl font-bold text-amber-700 mb-3">🚚 Phạm vi giao hàng</h3>
+        <p>Chúng tôi giao hàng trên toàn quốc thông qua các đơn vị vận chuyển uy tín. Riêng khu vực TP.HCM, chúng tôi có dịch vụ giao hàng nhanh trong ngày.</p>
+      </section>
 
-      <!-- Email -->
-      <div class="contact-card bg-white rounded-2xl shadow-lg p-8 text-center">
-        <h3 class="text-2xl font-bold text-gray-800 mb-3">Email Hỗ Trợ</h3>
-        <p class="text-lg font-semibold text-blue-600 mb-4 break-all">BABAIU23341@student.hcmiu.edu.vn</p>
-        <a href="mailto:BABAIU23341@student.hcmiu.edu.vn" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center">
-          Gửi Email
-        </a>
-      </div>
+      <section>
+        <h3 class="text-2xl font-bold text-amber-700 mb-3">⏰ Thời gian giao hàng</h3>
+        <ul class="list-disc list-inside space-y-2 text-gray-700">
+          <li>TP.HCM: 1 - 2 ngày làm việc</li>
+          <li>Các tỉnh/thành khác: 2 - 5 ngày làm việc</li>
+          <li>Ngày lễ/Tết: Thời gian có thể chậm hơn 1 - 2 ngày</li>
+        </ul>
+      </section>
 
-      <!-- Zalo -->
-      <div class="contact-card bg-white rounded-2xl shadow-lg p-8 text-center">
-        <h3 class="text-2xl font-bold text-gray-800 mb-3">Chat Zalo</h3>
-        <p class="text-xl font-semibold text-blue-500 mb-4">@caphesaigon</p>
-        <a href="https://zalo.me/caphesaigon" target="_blank" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center">
-          Nhắn Tin Ngay
-        </a>
-      </div>
-    </div>
+      <section>
+        <h3 class="text-2xl font-bold text-amber-700 mb-3">💳 Phí vận chuyển</h3>
+        <p>Miễn phí giao hàng cho đơn hàng từ <span class="font-semibold">300,000đ</span>. Với đơn hàng nhỏ hơn, phí vận chuyển sẽ được tính theo biểu phí của đơn vị vận chuyển.</p>
+      </section>
 
-    <!-- Form -->
-    <div class="bg-white rounded-2xl shadow-lg p-8 mb-12">
-      <h3 class="text-4xl font-bold text-amber-800 mb-6 text-center">Gửi Tin Nhắn</h3>
-      <form class="max-w-2xl mx-auto" onsubmit="handleSubmit(event)">
-        <div class="grid md:grid-cols-2 gap-6 mb-6">
-          <input type="text" required placeholder="Họ và Tên" class="w-full px-4 py-3 border rounded-lg">
-          <input type="tel" required placeholder="Số Điện Thoại" class="w-full px-4 py-3 border rounded-lg">
-        </div>
-        <input type="email" placeholder="Email" class="w-full px-4 py-3 border rounded-lg mb-6">
-        <select class="w-full px-4 py-3 border rounded-lg mb-6">
-          <option>Tư vấn sản phẩm</option>
-          <option>Hỗ trợ kỹ thuật</option>
-          <option>Khiếu nại</option>
-          <option>Góp ý</option>
-          <option>Khác</option>
-        </select>
-        <textarea required rows="5" placeholder="Nội dung..." class="w-full px-4 py-3 border rounded-lg mb-6"></textarea>
-        <div class="text-center">
-          <button type="submit" class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-xl font-semibold">
-            Gửi Tin Nhắn
-          </button>
-        </div>
-      </form>
+      <section>
+        <h3 class="text-2xl font-bold text-amber-700 mb-3">📦 Đóng gói</h3>
+        <p>Tất cả sản phẩm đều được đóng gói cẩn thận, có túi chống sốc và niêm phong kỹ trước khi giao để đảm bảo nguyên vẹn đến tay khách hàng.</p>
+      </section>
+
+      <section>
+        <h3 class="text-2xl font-bold text-amber-700 mb-3">🛑 Lưu ý</h3>
+        <p>Vui lòng kiểm tra sản phẩm ngay khi nhận hàng. Nếu có vấn đề, liên hệ ngay hotline <span class="font-semibold text-green-600">0988 007 527</span> để được hỗ trợ đổi trả.</p>
+      </section>
     </div>
 
     <!-- Nút dưới cùng -->
@@ -119,11 +89,6 @@
   </footer>
 
   <script>
-    function handleSubmit(event) {
-      event.preventDefault();
-      alert("Tin nhắn đã được gửi thành công!");
-      event.target.reset();
-    }
     function scrollToTop() {
       window.scrollTo({
         top: 0,
