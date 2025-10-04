@@ -3,117 +3,111 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thông Tin Giao Hàng - Cà Phê Sài Gòn</title>
+  <title>Chính Sách Giao Hàng - Cà Phê Sài Gòn</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body {
-      box-sizing: border-box;
-    }
-    .info-card {
-      transition: all 0.3s ease;
-    }
+    body { box-sizing: border-box; }
+    .info-card { transition: all 0.3s ease; }
     .info-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     }
   </style>
 </head>
 <body class="bg-gradient-to-br from-amber-50 to-orange-100 text-gray-800 min-h-screen">
-
-  <!-- Header Responsive -->
-  <header class="bg-gradient-to-r from-amber-800 to-amber-900 text-white shadow-lg sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center py-4">
-      <!-- Logo -->
-      <h1 class="text-2xl sm:text-3xl font-bold">Cà Phê Sài Gòn</h1>
-
-      <!-- Nút menu mobile -->
-      <button class="md:hidden block focus:outline-none" onclick="toggleMenu()">
-        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
-          <path d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-
-      <!-- Menu desktop -->
-      <nav class="hidden md:flex items-center space-x-6">
-        <a href="index.html" class="hover:text-amber-300">Trang Chủ</a>
-        <a href="shipping.html" class="hover:text-amber-300">Giao Hàng</a>
-        <a href="contact.html" class="hover:text-amber-300">Liên Hệ</a>
-        <a href="brewing.html" class="hover:text-amber-300">Pha Chế</a>
-      </nav>
-    </div>
-
-    <!-- Menu mobile dropdown -->
-    <div id="mobileMenu" class="hidden flex-col bg-amber-900 md:hidden">
-      <a href="index.html" class="px-4 py-3 border-t border-amber-700 hover:bg-amber-800">Trang Chủ</a>
-      <a href="shipping.html" class="px-4 py-3 border-t border-amber-700 hover:bg-amber-800">Giao Hàng</a>
-      <a href="contact.html" class="px-4 py-3 border-t border-amber-700 hover:bg-amber-800">Liên Hệ</a>
-      <a href="brewing.html" class="px-4 py-3 border-t border-amber-700 hover:bg-amber-800">Pha Chế</a>
-    </div>
-  </header>
-
-  <!-- Nội dung chính -->
-  <main class="max-w-6xl mx-auto px-4 py-12">
-    <div class="text-center mb-12">
-      <h2 class="text-6xl font-bold text-amber-800 mb-4">Thông Tin Giao Hàng</h2>
-      <p class="text-2xl text-gray-600 max-w-3xl mx-auto">
-        Cà Phê Sài Gòn cam kết giao hàng nhanh chóng, an toàn và tiện lợi cho khách hàng trên toàn quốc.
-      </p>
-    </div>
-
-    <!-- Thông tin giao hàng -->
-    <div class="grid md:grid-cols-3 gap-8 mb-12">
-      <div class="info-card bg-white rounded-2xl shadow-lg p-8 text-center">
-        <h3 class="text-2xl font-bold text-gray-800 mb-3">🚚 Giao Nhanh Nội Thành</h3>
-        <p class="text-lg text-gray-600">Thời gian 1-2 ngày làm việc tại TP.HCM.</p>
-      </div>
-      <div class="info-card bg-white rounded-2xl shadow-lg p-8 text-center">
-        <h3 class="text-2xl font-bold text-gray-800 mb-3">📦 Toàn Quốc</h3>
-        <p class="text-lg text-gray-600">2-4 ngày làm việc cho các tỉnh thành khác.</p>
-      </div>
-      <div class="info-card bg-white rounded-2xl shadow-lg p-8 text-center">
-        <h3 class="text-2xl font-bold text-gray-800 mb-3">💳 Thanh Toán</h3>
-        <p class="text-lg text-gray-600">COD, chuyển khoản, ví điện tử, thẻ ngân hàng.</p>
-      </div>
-    </div>
-
-    <!-- Chính sách -->
-    <div class="bg-white rounded-2xl shadow-lg p-8 mb-12">
-      <h3 class="text-4xl font-bold text-amber-800 mb-6 text-center">Chính Sách Vận Chuyển</h3>
-      <ul class="list-disc list-inside text-xl text-gray-700 space-y-3 max-w-3xl mx-auto">
-        <li>Miễn phí vận chuyển cho đơn hàng từ 500.000đ trở lên tại HCM.</li>
-        <li>Khách hàng ở tỉnh được hỗ trợ 50% phí ship cho đơn từ 700.000đ.</li>
-        <li>Đóng gói cẩn thận, đảm bảo chất lượng cà phê nguyên vẹn.</li>
-        <li>Cập nhật mã vận đơn ngay sau khi gửi hàng.</li>
-      </ul>
-    </div>
-
-    <!-- Nút dưới cùng -->
-    <div class="flex justify-center items-center gap-6 mt-12 mb-8">
-      <a href="index.html" class="bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white px-8 py-4 rounded-xl font-semibold text-xl transition-all duration-200 transform hover:scale-105 shadow-lg flex items-center">
-        <svg class="mr-3 w-8 h-8 fill-current" viewBox="0 0 24 24">
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-amber-800 to-amber-900 text-white py-4 md:py-6 shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 flex flex-wrap justify-between items-center">
+      <h1 class="text-2xl md:text-3xl font-bold mb-2 md:mb-0">Cà Phê Sài Gòn</h1>
+      <a href="index.html" class="bg-white/20 hover:bg-white/30 px-4 md:px-6 py-2 md:py-3 rounded-lg transition-colors duration-200 text-base md:text-lg font-medium flex items-center">
+        <svg class="mr-2 w-5 h-5 md:w-6 md:h-6 fill-current" viewBox="0 0 24 24">
           <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
         </svg>
         Về Trang Chủ
       </a>
-      <button onclick="scrollToTop()" class="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white w-14 h-14 rounded-full shadow-lg transition-all duration-200 transform hover:scale-110 flex items-center justify-center">
-        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
-          <path d="M12 4l-8 8h6v8h4v-8h6l-8-8z"/>
-        </svg>
-      </button>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="max-w-5xl mx-auto px-4 py-8 md:py-12">
+    <!-- Intro -->
+    <div class="text-center mb-10 md:mb-12">
+      <h2 class="text-4xl md:text-6xl lg:text-7xl font-bold text-amber-800 mb-4">Chính Sách Giao Hàng</h2>
+      <p class="text-lg md:text-2xl text-gray-600 max-w-3xl mx-auto">
+        Cà Phê Sài Gòn cam kết mang đến dịch vụ giao hàng nhanh chóng, đúng hẹn và an toàn cho mọi khách hàng.
+      </p>
+    </div>
+
+    <!-- Thời gian giao hàng -->
+    <div class="grid md:grid-cols-2 gap-6 mb-12">
+      <div class="info-card bg-white rounded-2xl shadow-lg p-6 md:p-8">
+        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-3">⏱️ Thời Gian Giao Hàng</h3>
+        <ul class="list-disc list-inside text-base md:text-lg text-gray-600 space-y-2">
+          <li>TP.HCM: 1 - 2 ngày làm việc.</li>
+          <li>Các tỉnh thành khác: 2 - 4 ngày làm việc.</li>
+          <li>Có hỗ trợ giao hỏa tốc trong nội thành.</li>
+        </ul>
+      </div>
+      <div class="info-card bg-white rounded-2xl shadow-lg p-6 md:p-8">
+        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-3">🚚 Đơn Vị Vận Chuyển</h3>
+        <p class="text-base md:text-lg text-gray-600 leading-relaxed">
+          Chúng tôi hợp tác với các đơn vị uy tín như Giao Hàng Nhanh (GHN), Giao Hàng Tiết Kiệm (GHTK), Viettel Post và Ahamove.
+        </p>
+      </div>
+    </div>
+
+    <!-- Chính sách phí -->
+    <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8 mb-12">
+      <h3 class="text-2xl md:text-4xl font-bold text-amber-800 mb-6 text-center">Phí Vận Chuyển</h3>
+      <ul class="list-disc list-inside text-base md:text-xl text-gray-700 space-y-3 max-w-3xl mx-auto">
+        <li>Nội thành HCM: 20.000đ - 30.000đ.</li>
+        <li>Các tỉnh thành: 30.000đ - 50.000đ (tùy địa điểm).</li>
+        <li>Miễn phí giao hàng cho đơn từ 500.000đ (HCM).</li>
+        <li>Khách hàng tỉnh được hỗ trợ 50% phí ship cho đơn từ 700.000đ.</li>
+      </ul>
+    </div>
+
+    <!-- Cam kết -->
+    <div class="bg-gradient-to-r from-amber-100 to-orange-100 rounded-2xl p-6 md:p-8">
+      <h3 class="text-2xl md:text-4xl font-bold text-amber-800 mb-6 text-center">Cam Kết Của Chúng Tôi</h3>
+      <div class="grid sm:grid-cols-2 gap-6">
+        <div class="bg-white/70 rounded-xl p-4 md:p-6">
+          <h4 class="font-semibold text-lg md:text-2xl text-amber-800 mb-2">Đóng gói cẩn thận</h4>
+          <p class="text-gray-700 text-base md:text-lg">Sản phẩm được bọc chống sốc, giữ hương vị nguyên vẹn.</p>
+        </div>
+        <div class="bg-white/70 rounded-xl p-4 md:p-6">
+          <h4 class="font-semibold text-lg md:text-2xl text-amber-800 mb-2">Theo dõi đơn hàng</h4>
+          <p class="text-gray-700 text-base md:text-lg">Khách hàng nhận mã vận đơn để kiểm tra tiến trình giao hàng.</p>
+        </div>
+      </div>
     </div>
   </main>
 
+  <!-- Home & Scroll Button -->
+  <div class="flex flex-wrap justify-center items-center gap-4 md:gap-6 mt-12 mb-8">
+    <a href="index.html" class="bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white px-6 md:px-8 py-3 md:py-4 rounded-xl font-semibold text-lg md:text-xl transition-all duration-200 transform hover:scale-105 shadow-lg flex items-center">
+      <svg class="mr-2 md:mr-3 w-6 h-6 md:w-8 md:h-8 fill-current" viewBox="0 0 24 24">
+        <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
+      </svg>
+      Về Trang Chủ
+    </a>
+    <button onclick="scrollToTop()" class="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white w-12 h-12 md:w-14 md:h-14 rounded-full shadow-lg transition-all duration-200 transform hover:scale-110 flex items-center justify-center">
+      <svg class="w-6 h-6 md:w-8 md:h-8 fill-current" viewBox="0 0 24 24">
+        <path d="M12 4l-8 8h6v8h4v-8h6l-8-8z"/>
+      </svg>
+    </button>
+  </div>
+
   <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-8 mt-8 text-center">
-    <h3 class="text-lg font-semibold mb-4">Cà Phê Sài Gòn</h3>
-    <p class="text-gray-400 text-sm">© 2024 Cà Phê Sài Gòn. Tất cả quyền được bảo lưu.</p>
+  <footer class="bg-gray-900 text-white py-6 md:py-8 mt-16">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h3 class="text-base md:text-lg font-semibold mb-3 md:mb-4">Cà Phê Sài Gòn</h3>
+      <p class="text-gray-400 text-xs md:text-sm">© 2024 Cà Phê Sài Gòn. Tất cả quyền được bảo lưu.</p>
+      <p class="text-gray-500 text-xs mt-2">Hương vị truyền thống - Chất lượng hiện đại</p>
+    </div>
   </footer>
 
   <script>
-    function toggleMenu() {
-      const menu = document.getElementById("mobileMenu");
-      menu.classList.toggle("hidden");
-    }
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
