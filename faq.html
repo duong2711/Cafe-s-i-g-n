@@ -6,26 +6,21 @@
   <title>Câu Hỏi Thường Gặp - Cà Phê Sài Gòn</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body {
-      box-sizing: border-box;
-    }
-    
-    .faq-item {
-      transition: all 0.3s ease;
-    }
-    
-    .faq-item:hover {
+    body { box-sizing: border-box; }
+    .faq-card { transition: all 0.3s ease; }
+    .faq-card:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-  <header class="bg-gradient-to-r from-amber-800 to-amber-900 text-white py-6 shadow-lg sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
-      <h1 class="text-3xl font-bold">Cà Phê Sài Gòn</h1>
-      <a href="index.html" class="bg-white/20 hover:bg-white/30 px-6 py-3 rounded-lg transition-colors duration-200 text-lg font-medium flex items-center">
-        <svg class="mr-2 w-6 h-6 fill-current" viewBox="0 0 24 24">
+<body class="bg-gradient-to-br from-amber-50 to-orange-100 text-gray-800 min-h-screen">
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-amber-800 to-amber-900 text-white py-4 md:py-6 shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 flex flex-wrap justify-between items-center">
+      <h1 class="text-2xl md:text-3xl font-bold mb-2 md:mb-0">Cà Phê Sài Gòn</h1>
+      <a href="index.html" class="bg-white/20 hover:bg-white/30 px-4 md:px-6 py-2 md:py-3 rounded-lg transition-colors duration-200 text-base md:text-lg font-medium flex items-center">
+        <svg class="mr-2 w-5 h-5 md:w-6 md:h-6 fill-current" viewBox="0 0 24 24">
           <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
         </svg>
         Về Trang Chủ
@@ -33,94 +28,65 @@
     </div>
   </header>
 
-  <main class="max-w-4xl mx-auto px-4 py-12">
-    <h2 class="text-3xl font-bold text-amber-800 mb-8">Câu Hỏi Thường Gặp</h2>
-    
-    <div class="space-y-6">
-      <div class="faq-item bg-white rounded-lg p-6 shadow-sm border border-gray-200">
-        <p class="text-xl leading-relaxed">
-          <span class="font-bold text-amber-800">Q:</span> Tôi có thể thanh toán bằng cách nào?<br>
-          <span class="font-bold text-green-700">A:</span> Chúng tôi hỗ trợ nhiều phương thức thanh toán: COD (thanh toán khi nhận hàng), chuyển khoản ngân hàng, ví điện tử (MoMo, ZaloPay), và thẻ tín dụng Visa/MasterCard.
-        </p>
-      </div>
-
-      <div class="faq-item bg-white rounded-lg p-6 shadow-sm border border-gray-200">
-        <p class="text-xl leading-relaxed">
-          <span class="font-bold text-amber-800">Q:</span> Sản phẩm có bảo đảm chất lượng không?<br>
-          <span class="font-bold text-green-700">A:</span> Có, tất cả cà phê của chúng tôi đều được rang tươi trong vòng 7 ngày và có cam kết chất lượng 100%. Nếu không hài lòng, bạn có thể đổi trả miễn phí.
-        </p>
-      </div>
-
-      <div class="faq-item bg-white rounded-lg p-6 shadow-sm border border-gray-200">
-        <p class="text-xl leading-relaxed">
-          <span class="font-bold text-amber-800">Q:</span> Thời gian giao hàng là bao lâu?<br>
-          <span class="font-bold text-green-700">A:</span> Giao hàng trong 1-2 ngày tại TP.HCM và các tỉnh lân cận, 2-3 ngày cho các tỉnh thành khác. Miễn phí giao hàng cho đơn từ 200.000đ.
-        </p>
-      </div>
-
-      <div class="faq-item bg-white rounded-lg p-6 shadow-sm border border-gray-200">
-        <p class="text-xl leading-relaxed">
-          <span class="font-bold text-amber-800">Q:</span> Làm thế nào để bảo quản cà phê đúng cách?<br>
-          <span class="font-bold text-green-700">A:</span> Bảo quản cà phê ở nơi khô ráo, thoáng mát, tránh ánh sáng trực tiếp. Nên sử dụng hộp kín hoặc túi zip để giữ hương vị tốt nhất.
-        </p>
-      </div>
-
-      <div class="faq-item bg-white rounded-lg p-6 shadow-sm border border-gray-200">
-        <p class="text-xl leading-relaxed">
-          <span class="font-bold text-amber-800">Q:</span> Có chương trình khuyến mãi nào không?<br>
-          <span class="font-bold text-green-700">A:</span> Chúng tôi thường xuyên có các chương trình ưu đãi cho khách hàng thân thiết, giảm giá theo mùa và combo sản phẩm. Theo dõi fanpage để cập nhật khuyến mãi mới nhất.
-        </p>
-      </div>
-
-      <div class="faq-item bg-white rounded-lg p-6 shadow-sm border border-gray-200">
-        <p class="text-xl leading-relaxed">
-          <span class="font-bold text-amber-800">Q:</span> Tôi có thể đặt hàng số lượng lớn không?<br>
-          <span class="font-bold text-green-700">A:</span> Có, chúng tôi hỗ trợ đặt hàng số lượng lớn cho doanh nghiệp, quán cà phê với giá ưu đãi đặc biệt. Liên hệ hotline để được tư vấn chi tiết.
-        </p>
-      </div>
-
-      <div class="faq-item bg-white rounded-lg p-6 shadow-sm border border-gray-200">
-        <p class="text-xl leading-relaxed">
-          <span class="font-bold text-amber-800">Q:</span> Sản phẩm có xuất xứ từ đâu?<br>
-          <span class="font-bold text-green-700">A:</span> Cà phê của chúng tôi được trồng tại các vùng cao nguyên Đà Lạt, Buôn Ma Thuột với khí hậu và thổ nhưỡng lý tưởng cho cây cà phê chất lượng cao.
-        </p>
-      </div>
-
-      <div class="faq-item bg-white rounded-lg p-6 shadow-sm border border-gray-200">
-        <p class="text-xl leading-relaxed">
-          <span class="font-bold text-amber-800">Q:</span> Làm thế nào để liên hệ hỗ trợ khách hàng?<br>
-          <span class="font-bold text-green-700">A:</span> Bạn có thể liên hệ qua hotline 0988 007 527 (24/7), email BABAIU23341@student.hcmiu.edu.vn, hoặc chat Zalo @caphesaigon để được hỗ trợ nhanh chóng.
-        </p>
-      </div>
+  <!-- Main -->
+  <main class="max-w-5xl mx-auto px-4 py-8 md:py-12">
+    <!-- Intro -->
+    <div class="text-center mb-10 md:mb-12">
+      <h2 class="text-4xl md:text-6xl lg:text-7xl font-bold text-amber-800 mb-4">Câu Hỏi Thường Gặp</h2>
+      <p class="text-lg md:text-2xl text-gray-600 max-w-3xl mx-auto">
+        Dưới đây là những thắc mắc phổ biến mà khách hàng hay đặt ra. Nếu bạn cần thêm thông tin, vui lòng liên hệ với chúng tôi.
+      </p>
     </div>
 
-    <!-- Home Button Section -->
-    <div class="flex justify-center items-center gap-6 mt-12 mb-8">
-      <a href="index.html" class="bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white px-8 py-4 rounded-xl font-semibold text-xl transition-all duration-200 transform hover:scale-105 shadow-lg flex items-center">
-        <svg class="mr-3 w-8 h-8 fill-current" viewBox="0 0 24 24">
-          <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
-        </svg>
-        Về Trang Chủ
-      </a>
-      <button onclick="scrollToTop()" class="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white w-14 h-14 rounded-full shadow-lg transition-all duration-200 transform hover:scale-110 flex items-center justify-center">
-        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
-          <path d="M12 4l-8 8h6v8h4v-8h6l-8-8z"/>
-        </svg>
-      </button>
+    <!-- FAQ Grid -->
+    <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+      <div class="faq-card bg-white rounded-2xl shadow-lg p-6 md:p-8">
+        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-3">🕐 Thời gian hỗ trợ?</h3>
+        <p class="text-base md:text-lg text-gray-600">Hotline & Email: 24/7. Zalo: 8:00 - 22:00 hàng ngày.</p>
+      </div>
+      <div class="faq-card bg-white rounded-2xl shadow-lg p-6 md:p-8">
+        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-3">📦 Chính sách đổi trả?</h3>
+        <p class="text-base md:text-lg text-gray-600">Đổi trả miễn phí trong vòng 7 ngày nếu sản phẩm lỗi do nhà sản xuất.</p>
+      </div>
+      <div class="faq-card bg-white rounded-2xl shadow-lg p-6 md:p-8">
+        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-3">🚚 Thời gian giao hàng?</h3>
+        <p class="text-base md:text-lg text-gray-600">1-2 ngày tại TP.HCM, 2-3 ngày ở các tỉnh thành khác.</p>
+      </div>
+      <div class="faq-card bg-white rounded-2xl shadow-lg p-6 md:p-8">
+        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-3">💳 Hình thức thanh toán?</h3>
+        <p class="text-base md:text-lg text-gray-600">COD, chuyển khoản ngân hàng, ví điện tử và thẻ quốc tế.</p>
+      </div>
     </div>
   </main>
 
-  <footer class="bg-gray-900 text-white py-6 text-center text-gray-400 text-sm">
-    © 2024 Cà Phê Sài Gòn. Tất cả quyền được bảo lưu.
+  <!-- Home & Scroll Button -->
+  <div class="flex flex-wrap justify-center items-center gap-4 md:gap-6 mt-12 mb-8">
+    <a href="index.html" class="bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white px-6 md:px-8 py-3 md:py-4 rounded-xl font-semibold text-lg md:text-xl transition-all duration-200 transform hover:scale-105 shadow-lg flex items-center">
+      <svg class="mr-2 md:mr-3 w-6 h-6 md:w-8 md:h-8 fill-current" viewBox="0 0 24 24">
+        <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
+      </svg>
+      Về Trang Chủ
+    </a>
+    <button onclick="scrollToTop()" class="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white w-12 h-12 md:w-14 md:h-14 rounded-full shadow-lg transition-all duration-200 transform hover:scale-110 flex items-center justify-center">
+      <svg class="w-6 h-6 md:w-8 md:h-8 fill-current" viewBox="0 0 24 24">
+        <path d="M12 4l-8 8h6v8h4v-8h6l-8-8z"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-6 md:py-8 mt-16">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h3 class="text-base md:text-lg font-semibold mb-3 md:mb-4">Cà Phê Sài Gòn</h3>
+      <p class="text-gray-400 text-xs md:text-sm">© 2024 Cà Phê Sài Gòn. Tất cả quyền được bảo lưu.</p>
+      <p class="text-gray-500 text-xs mt-2">Hương vị truyền thống - Chất lượng hiện đại</p>
+    </div>
   </footer>
 
   <script>
     function scrollToTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'988f5b3eb309096a',t:'MTc1OTUyNTA5NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>
