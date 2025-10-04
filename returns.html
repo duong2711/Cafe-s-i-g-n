@@ -1,20 +1,37 @@
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hướng Dẫn Pha Chế - Cà Phê Sài Gòn</title>
+  <title>Chính Sách Hoàn Tiền & Đổi Trả - Cà Phê Sài Gòn</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body { box-sizing: border-box; }
-    .brew-card { transition: all 0.3s ease; }
-    .brew-card:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+    body {
+      box-sizing: border-box;
+    }
+    
+    .policy-item {
+      transition: all 0.3s ease;
+    }
+    
+    .policy-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+    
+    .step-item {
+      transition: all 0.3s ease;
+    }
+    
+    .step-item:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
   </style>
 </head>
-<body class="bg-gradient-to-br from-amber-50 to-orange-100 text-gray-800 min-h-screen">
-
-  <!-- Header Responsive Cũ -->
-  <header class="bg-gradient-to-r from-amber-800 to-amber-900 text-white py-4 md:py-6 shadow-lg sticky top-0 z-50">
+<body class="bg-gray-50 text-gray-800">
+   <header class="bg-gradient-to-r from-amber-800 to-amber-900 text-white py-4 md:py-6 shadow-lg sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 flex flex-wrap justify-between items-center">
       <h1 class="text-2xl md:text-3xl font-bold mb-2 md:mb-0">Cà Phê Sài Gòn</h1>
       <a href="index.html" class="bg-white/20 hover:bg-white/30 px-4 md:px-6 py-2 md:py-3 rounded-lg transition-colors duration-200 text-base md:text-lg font-medium flex items-center">
@@ -25,3 +42,242 @@
       </a>
     </div>
   </header>
+
+  <main class="max-w-5xl mx-auto px-4 py-12">
+    <h2 class="text-4xl font-bold text-amber-800 mb-8 text-center">Chính Sách Hoàn Tiền & Đổi Trả</h2>
+    
+    <div class="bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl p-8 mb-8">
+      <p class="text-2xl text-gray-700 text-center leading-relaxed">
+        Chúng tôi cam kết mang đến trải nghiệm mua sắm tuyệt vời nhất cho khách hàng. 
+        Nếu bạn không hoàn toàn hài lòng với sản phẩm, chúng tôi sẵn sàng hỗ trợ đổi trả một cách nhanh chóng và thuận tiện.
+      </p>
+    </div>
+
+    <!-- Main Policies -->
+    <div class="grid md:grid-cols-3 gap-6 mb-12">
+      <div class="policy-item bg-white rounded-xl p-6 shadow-sm border border-gray-200 text-center">
+        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-green-600" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M7,13H9L10.5,9.5L12.5,13.5L14.5,9.5L16,13H18L15.5,7H13.5L12,10.5L10.5,7H8.5L7,13Z"/>
+          </svg>
+        </div>
+        <h3 class="text-3xl font-bold text-amber-800 mb-3">7 Ngày</h3>
+        <p class="text-xl text-gray-700">Thời gian đổi trả kể từ ngày nhận hàng</p>
+      </div>
+
+      <div class="policy-item bg-white rounded-xl p-6 shadow-sm border border-gray-200 text-center">
+        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-blue-600" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,17A1.5,1.5 0 0,0 13.5,15.5A1.5,1.5 0 0,0 12,14A1.5,1.5 0 0,0 10.5,15.5A1.5,1.5 0 0,0 12,17M12,10.5C12.8,10.5 13.5,9.8 13.5,9C13.5,8.2 12.8,7.5 12,7.5C11.2,7.5 10.5,8.2 10.5,9C10.5,9.8 11.2,10.5 12,10.5Z"/>
+          </svg>
+        </div>
+        <h3 class="text-3xl font-bold text-amber-800 mb-3">Miễn Phí</h3>
+        <p class="text-xl text-gray-700">Không tính phí đổi trả với lỗi từ nhà sản xuất</p>
+      </div>
+
+      <div class="policy-item bg-white rounded-xl p-6 shadow-sm border border-gray-200 text-center">
+        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-purple-600" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,17A1.5,1.5 0 0,0 13.5,15.5A1.5,1.5 0 0,0 12,14A1.5,1.5 0 0,0 10.5,15.5A1.5,1.5 0 0,0 12,17M12,10.5C12.8,10.5 13.5,9.8 13.5,9C13.5,8.2 12.8,7.5 12,7.5C11.2,7.5 10.5,8.2 10.5,9C10.5,9.8 11.2,10.5 12,10.5Z"/>
+          </svg>
+        </div>
+        <h3 class="text-3xl font-bold text-amber-800 mb-3">3-5 Ngày</h3>
+        <p class="text-xl text-gray-700">Thời gian hoàn tiền sau khi xác nhận</p>
+      </div>
+    </div>
+
+    <!-- Detailed Policies -->
+    <div class="space-y-8">
+      <!-- Return Conditions -->
+      <div class="policy-item bg-white rounded-xl p-8 shadow-sm border border-gray-200">
+        <div class="flex items-start">
+          <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mr-6 flex-shrink-0">
+            <svg class="w-6 h-6 text-orange-600" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M11,16.5L18,9.5L16.59,8.09L11,13.67L7.91,10.59L6.5,12L11,16.5Z"/>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-3xl font-bold text-amber-800 mb-4">Điều Kiện Đổi Trả</h3>
+            <div class="grid md:grid-cols-2 gap-4">
+              <div class="bg-gray-50 rounded-lg p-4">
+                <h4 class="font-bold text-xl text-gray-800 mb-2">✅ Được Chấp Nhận</h4>
+                <ul class="text-xl text-gray-700 space-y-1">
+                  <li>• Sản phẩm còn nguyên tem, nhãn mác</li>
+                  <li>• Chưa mở seal, chưa sử dụng</li>
+                  <li>• Còn trong thời hạn 7 ngày</li>
+                  <li>• Có hóa đơn mua hàng</li>
+                  <li>• Bao bì còn nguyên vẹn</li>
+                </ul>
+              </div>
+              <div class="bg-red-50 rounded-lg p-4">
+                <h4 class="font-bold text-xl text-gray-800 mb-2">❌ Không Chấp Nhận</h4>
+                <ul class="text-xl text-gray-700 space-y-1">
+                  <li>• Sản phẩm đã mở seal</li>
+                  <li>• Quá thời hạn 7 ngày</li>
+                  <li>• Không có hóa đơn</li>
+                  <li>• Bao bì bị hư hỏng</li>
+                  <li>• Lý do cá nhân (không thích mùi vị)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Return Process -->
+      <div class="policy-item bg-white rounded-xl p-8 shadow-sm border border-gray-200">
+        <h3 class="text-3xl font-bold text-amber-800 mb-6 text-center">Quy Trình Đổi Trả</h3>
+        <div class="grid md:grid-cols-4 gap-4">
+          <div class="step-item text-center bg-gradient-to-b from-blue-50 to-blue-100 rounded-lg p-6">
+            <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-3 text-xl font-bold">1</div>
+            <h4 class="font-bold text-xl text-gray-800 mb-2">Liên Hệ</h4>
+            <p class="text-lg text-gray-700">Gọi hotline hoặc nhắn tin Zalo thông báo đổi trả</p>
+          </div>
+          <div class="step-item text-center bg-gradient-to-b from-green-50 to-green-100 rounded-lg p-6">
+            <div class="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center mx-auto mb-3 text-xl font-bold">2</div>
+            <h4 class="font-bold text-xl text-gray-800 mb-2">Xác Nhận</h4>
+            <p class="text-lg text-gray-700">Cung cấp thông tin đơn hàng và lý do đổi trả</p>
+          </div>
+          <div class="step-item text-center bg-gradient-to-b from-purple-50 to-purple-100 rounded-lg p-6">
+            <div class="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center mx-auto mb-3 text-xl font-bold">3</div>
+            <h4 class="font-bold text-xl text-gray-800 mb-2">Gửi Hàng</h4>
+            <p class="text-lg text-gray-700">Đóng gói sản phẩm và gửi về địa chỉ chúng tôi cung cấp</p>
+          </div>
+          <div class="step-item text-center bg-gradient-to-b from-orange-50 to-orange-100 rounded-lg p-6">
+            <div class="w-12 h-12 bg-orange-600 text-white rounded-full flex items-center justify-center mx-auto mb-3 text-xl font-bold">4</div>
+            <h4 class="font-bold text-xl text-gray-800 mb-2">Hoàn Tất</h4>
+            <p class="text-lg text-gray-700">Nhận sản phẩm mới hoặc hoàn tiền trong 3-5 ngày</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Refund Policy -->
+      <div class="policy-item bg-white rounded-xl p-8 shadow-sm border border-gray-200">
+        <div class="flex items-start">
+          <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-6 flex-shrink-0">
+            <svg class="w-6 h-6 text-green-600" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M7,15H9C9,16.08 10.37,17 12,17C13.63,17 15,16.08 15,15C15,13.9 13.96,13.5 11.76,12.97C9.64,12.44 7,11.78 7,9C7,7.21 8.47,5.69 10.5,5.18V3H13.5V5.18C15.53,5.69 17,7.21 17,9H15C15,7.92 13.63,7 12,7C10.37,7 9,7.92 9,9C9,10.1 10.04,10.5 12.24,11.03C14.36,11.56 17,12.22 17,15C17,16.79 15.53,18.31 13.5,18.82V21H10.5V18.82C8.47,18.31 7,16.79 7,15Z"/>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-3xl font-bold text-amber-800 mb-4">Chính Sách Hoàn Tiền</h3>
+            <div class="space-y-4">
+              <div class="bg-green-50 rounded-lg p-4">
+                <h4 class="font-bold text-xl text-green-800 mb-2">💰 Hoàn Tiền 100%</h4>
+                <p class="text-xl text-gray-700">Áp dụng khi sản phẩm có lỗi từ nhà sản xuất, giao sai hàng, hoặc hư hỏng trong quá trình vận chuyển.</p>
+              </div>
+              <div class="bg-blue-50 rounded-lg p-4">
+                <h4 class="font-bold text-xl text-blue-800 mb-2">🔄 Đổi Sản Phẩm Khác</h4>
+                <p class="text-xl text-gray-700">Khách hàng có thể đổi sang sản phẩm khác có giá trị tương đương hoặc bù thêm tiền nếu sản phẩm mới có giá cao hơn.</p>
+              </div>
+              <div class="bg-yellow-50 rounded-lg p-4">
+                <h4 class="font-bold text-xl text-yellow-800 mb-2">⏰ Thời Gian Hoàn Tiền</h4>
+                <p class="text-xl text-gray-700">3-5 ngày làm việc đối với chuyển khoản ngân hàng, 1-2 ngày đối với ví điện tử, hoàn tiền ngay lập tức nếu thanh toán COD.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Special Cases -->
+      <div class="policy-item bg-white rounded-xl p-8 shadow-sm border border-gray-200">
+        <div class="flex items-start">
+          <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-6 flex-shrink-0">
+            <svg class="w-6 h-6 text-red-600" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"/>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-3xl font-bold text-amber-800 mb-4">Trường Hợp Đặc Biệt</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="font-bold text-xl text-gray-800 mb-3">🚚 Lỗi Vận Chuyển</h4>
+                <ul class="text-xl text-gray-700 space-y-2">
+                  <li>• Hàng bị hư hỏng do vận chuyển</li>
+                  <li>• Giao sai địa chỉ</li>
+                  <li>• Mất hàng trong quá trình giao</li>
+                  <li>• Chúng tôi chịu 100% chi phí</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-bold text-xl text-gray-800 mb-3">🏪 Lỗi Cửa Hàng</h4>
+                <ul class="text-xl text-gray-700 space-y-2">
+                  <li>• Giao sai sản phẩm</li>
+                  <li>• Thiếu số lượng</li>
+                  <li>• Sản phẩm không đúng mô tả</li>
+                  <li>• Hoàn tiền + bồi thường 10%</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="bg-gradient-to-r from-amber-100 to-orange-100 rounded-2xl p-8">
+        <h3 class="text-3xl font-bold text-amber-800 mb-6 text-center">Liên Hệ Hỗ Trợ Đổi Trả</h3>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="text-center bg-white/70 rounded-xl p-6">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-green-600" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z"/>
+              </svg>
+            </div>
+            <h4 class="font-bold text-xl text-amber-800 mb-2">Hotline</h4>
+            <p class="text-2xl font-bold text-green-600">0988 007 527</p>
+            <p class="text-gray-600">Hỗ trợ 24/7</p>
+          </div>
+          <div class="text-center bg-white/70 rounded-xl p-6">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-blue-600" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"/>
+              </svg>
+            </div>
+            <h4 class="font-bold text-xl text-amber-800 mb-2">Email</h4>
+            <p class="text-lg font-semibold text-blue-600 break-all">BABAIU23341@student.hcmiu.edu.vn</p>
+            <p class="text-gray-600">Phản hồi trong 2h</p>
+          </div>
+          <div class="text-center bg-white/70 rounded-xl p-6">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-blue-500" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8Z"/>
+              </svg>
+            </div>
+            <h4 class="font-bold text-xl text-amber-800 mb-2">Zalo</h4>
+            <p class="text-xl font-semibold text-blue-500">@caphesaigon</p>
+            <p class="text-gray-600">Chat trực tiếp</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Home Button Section -->
+    <div class="flex justify-center items-center gap-6 mt-12 mb-8">
+      <a href="index.html" class="bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white px-8 py-4 rounded-xl font-semibold text-xl transition-all duration-200 transform hover:scale-105 shadow-lg flex items-center">
+        <svg class="mr-3 w-8 h-8 fill-current" viewBox="0 0 24 24">
+          <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
+        </svg>
+        Về Trang Chủ
+      </a>
+      <button onclick="scrollToTop()" class="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white w-14 h-14 rounded-full shadow-lg transition-all duration-200 transform hover:scale-110 flex items-center justify-center">
+        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+          <path d="M12 4l-8 8h6v8h4v-8h6l-8-8z"/>
+        </svg>
+      </button>
+    </div>
+  </main>
+
+  <footer class="bg-gray-900 text-white py-6 text-center text-gray-400 text-sm">
+    © 2024 Cà Phê Sài Gòn. Tất cả quyền được bảo lưu.
+  </footer>
+
+  <script>
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+  </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98945afe75900540',t:'MTc1OTU3NzUxMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
