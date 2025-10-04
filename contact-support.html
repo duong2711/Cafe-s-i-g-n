@@ -97,15 +97,15 @@
     </div>
 
     <!-- Nút dưới cùng -->
-    <div class="flex justify-center items-center gap-6 mt-12 mb-8">
-      <a href="index.html" class="bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white px-8 py-4 rounded-xl font-semibold text-xl transition-all duration-200 transform hover:scale-105 shadow-lg flex items-center">
-        <svg class="mr-3 w-8 h-8 fill-current" viewBox="0 0 24 24">
+    <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 mt-12 mb-8">
+      <a href="index.html" class="w-full sm:w-auto text-center bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold text-lg sm:text-xl transition-all duration-200 transform hover:scale-105 shadow-lg flex items-center justify-center">
+        <svg class="mr-2 sm:mr-3 w-6 h-6 sm:w-8 sm:h-8 fill-current" viewBox="0 0 24 24">
           <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
         </svg>
         Về Trang Chủ
       </a>
-      <button onclick="scrollToTop()" class="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white w-14 h-14 rounded-full shadow-lg transition-all duration-200 transform hover:scale-110 flex items-center justify-center">
-        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+      <button onclick="scrollToTop()" class="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white w-12 h-12 sm:w-14 sm:h-14 rounded-full shadow-lg transition-all duration-200 transform hover:scale-110 flex items-center justify-center">
+        <svg class="w-6 h-6 sm:w-8 sm:h-8 fill-current" viewBox="0 0 24 24">
           <path d="M12 4l-8 8h6v8h4v-8h6l-8-8z"/>
         </svg>
       </button>
@@ -124,7 +124,6 @@
       alert("Tin nhắn đã được gửi thành công!");
       event.target.reset();
     }
-
     function scrollToTop() {
       window.scrollTo({
         top: 0,
