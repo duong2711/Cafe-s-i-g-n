@@ -1,3 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liên Hệ Hỗ Trợ - Cà Phê Sài Gòn</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+    .contact-card {
+      transition: all 0.3s ease;
+    }
+    .contact-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-amber-50 to-orange-100 text-gray-800 min-h-screen">
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-amber-800 to-amber-900 text-white py-6 shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+      <h1 class="text-3xl font-bold">Cà Phê Sài Gòn</h1>
+      <a href="index.html" class="bg-white/20 hover:bg-white/30 px-6 py-3 rounded-lg text-lg font-medium flex items-center">
+        <svg class="mr-2 w-6 h-6 fill-current" viewBox="0 0 24 24">
+          <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
+        </svg>
+        Về Trang Chủ
+      </a>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-12">
+    <!-- Tiêu đề -->
+    <div class="text-center mb-12">
+      <h2 class="text-6xl font-bold text-amber-800 mb-4">Liên Hệ Hỗ Trợ</h2>
+      <p class="text-2xl text-gray-600 max-w-3xl mx-auto">
+        Chúng tôi luôn sẵn sàng hỗ trợ bạn 24/7. Hãy liên hệ với chúng tôi qua các kênh dưới đây.
+      </p>
+    </div>
+
+    <!-- Thẻ liên hệ -->
+    <div class="grid md:grid-cols-3 gap-8 mb-12">
+      <!-- Hotline -->
+      <div class="contact-card bg-white rounded-2xl shadow-lg p-8 text-center">
+        <h3 class="text-2xl font-bold text-gray-800 mb-3">Hotline 24/7</h3>
+        <p class="text-4xl font-bold text-green-600 mb-4">0988 007 527</p>
+        <a href="tel:0988007527" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center">
+          Gọi Ngay
+        </a>
+      </div>
+
+      <!-- Email -->
+      <div class="contact-card bg-white rounded-2xl shadow-lg p-8 text-center">
+        <h3 class="text-2xl font-bold text-gray-800 mb-3">Email Hỗ Trợ</h3>
+        <p class="text-lg font-semibold text-blue-600 mb-4 break-all">BABAIU23341@student.hcmiu.edu.vn</p>
+        <a href="mailto:BABAIU23341@student.hcmiu.edu.vn" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center">
+          Gửi Email
+        </a>
+      </div>
+
+      <!-- Zalo -->
+      <div class="contact-card bg-white rounded-2xl shadow-lg p-8 text-center">
+        <h3 class="text-2xl font-bold text-gray-800 mb-3">Chat Zalo</h3>
+        <p class="text-xl font-semibold text-blue-500 mb-4">@caphesaigon</p>
+        <a href="https://zalo.me/caphesaigon" target="_blank" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center">
+          Nhắn Tin Ngay
+        </a>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <div class="bg-white rounded-2xl shadow-lg p-8 mb-12">
+      <h3 class="text-4xl font-bold text-amber-800 mb-6 text-center">Gửi Tin Nhắn</h3>
+      <form class="max-w-2xl mx-auto" onsubmit="handleSubmit(event)">
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <input type="text" required placeholder="Họ và Tên" class="w-full px-4 py-3 border rounded-lg">
+          <input type="tel" required placeholder="Số Điện Thoại" class="w-full px-4 py-3 border rounded-lg">
+        </div>
+        <input type="email" placeholder="Email" class="w-full px-4 py-3 border rounded-lg mb-6">
+        <select class="w-full px-4 py-3 border rounded-lg mb-6">
+          <option>Tư vấn sản phẩm</option>
+          <option>Hỗ trợ kỹ thuật</option>
+          <option>Khiếu nại</option>
+          <option>Góp ý</option>
+          <option>Khác</option>
+        </select>
+        <textarea required rows="5" placeholder="Nội dung..." class="w-full px-4 py-3 border rounded-lg mb-6"></textarea>
+        <div class="text-center">
+          <button type="submit" class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-xl font-semibold">
+            Gửi Tin Nhắn
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Nút dưới cùng -->
+    <div class="flex justify-center items-center gap-6 mt-12 mb-8">
+      <a href="index.html" class="bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white px-8 py-4 rounded-xl font-semibold text-xl transition-all duration-200 transform hover:scale-105 shadow-lg flex items-center">
+        <svg class="mr-3 w-8 h-8 fill-current" viewBox="0 0 24 24">
+          <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
+        </svg>
+        Về Trang Chủ
+      </a>
+      <button onclick="scrollToTop()" class="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white w-14 h-14 rounded-full shadow-lg transition-all duration-200 transform hover:scale-110 flex items-center justify-center">
+        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+          <path d="M12 4l-8 8h6v8h4v-8h6l-8-8z"/>
+        </svg>
+      </button>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8 mt-8 text-center">
+    <h3 class="text-lg font-semibold mb-4">Cà Phê Sài Gòn</h3>
+    <p class="text-gray-400 text-sm">© 2024 Cà Phê Sài Gòn. Tất cả quyền được bảo lưu.</p>
+  </footer>
+
   <script>
     function handleSubmit(event) {
       event.preventDefault();
@@ -12,3 +132,5 @@
       });
     }
   </script>
+</body>
+</html>
